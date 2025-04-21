@@ -1,67 +1,122 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khóa Điện Tử Đà Nẵng</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    header { 
-      background: url('IMAGE_URL') center/cover no-repeat; 
-      height: 60vh; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      color: white; 
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-    }
-    header h1 { font-size: 2.5rem; }
-    main { padding: 1rem; }
-    .button { 
-      display: block; 
-      text-align: center; 
-      margin: 0.5rem 0; 
-      padding: 0.75rem; 
-      border-radius: 8px; 
-      text-decoration: none; 
-      font-weight: bold;
-    }
-    .call { background: #28a745; color: white; }
-    .zalo { background: #0068ff; color: white; }
-    section { margin-top: 1.5rem; }
-    h2 { margin-bottom: 0.5rem; font-size: 1.25rem; }
-    ul { list-style: disc inside; }
-    footer { text-align: center; margin: 2rem 0 1rem; color: #666; }
-    @media (min-width: 600px) {
-      header h1 { font-size: 3rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dịch vụ khóa điện tử cao cấp tại Đà Nẵng. Đảm bảo an toàn, tiện lợi, dễ sử dụng cho mọi gia đình và doanh nghiệp.">
+    <meta name="keywords" content="Khóa điện tử, Khóa thông minh, Khóa cửa, Khóa an toàn Đà Nẵng">
+    <title>Khóa Điện Tử Đà Nẵng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .services, .contact {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-item, .contact-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .service-item h3, .contact-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Khóa Điện Tử Đà Nẵng</h1>
-  </header>
-  <main>
-    <section class="contact">
-      <a href="tel:0902950816" class="button call">📞 Gọi ngay: 0902 950 816</a>
-      <a href="https://zalo.me/0902950816" class="button zalo">💬 Nhắn Zalo</a>
-    </section>
-    <section class="address">
-      <p>📍 Địa chỉ: 223 Trường Chinh, TP. Đà Nẵng</p>
-      <p><a href="https://www.google.com/maps/search/?api=1&query=223+Trường+Chinh+Đà+Nẵng" target="_blank" class="button">🗺️ Xem bản đồ</a></p>
-    </section>
-    <section class="services">
-      <h2>Dịch vụ</h2>
-      <ul>
-        <li>Lắp đặt khóa điện tử tại nhà</li>
-        <li>Sửa chữa khóa điện tử</li>
-        <li>Tư vấn và hỗ trợ tận nơi</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    ⏰ Giờ làm việc: 7:30 – 21:00 hàng ngày
-  </footer>
+    <header>
+        <h1>Khóa Điện Tử Đà Nẵng</h1>
+        <p>Giải pháp khóa cửa an toàn và tiện lợi cho gia đình, văn phòng, khách sạn.</p>
+    </header>
+
+    <div class="container">
+        <!-- Services -->
+        <section class="services">
+            <div class="service-item">
+                <i class="fas fa-lock icon"></i>
+                <h3>Khóa An Toàn</h3>
+                <p>Khóa điện tử với công nghệ tiên tiến, bảo mật cao, chống xâm nhập.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-bolt icon"></i>
+                <h3>Cài Đặt Dễ Dàng</h3>
+                <p>Lắp đặt nhanh chóng, không cần thay đổi cấu trúc cửa. Phù hợp với mọi không gian.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-mobile-alt icon"></i>
+                <h3>Điều Khiển Từ Xa</h3>
+                <p>Quản lý và điều khiển khóa từ xa qua điện thoại, dễ dàng và tiện lợi.</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <div class="contact-item">
+                <h3>Liên hệ ngay!</h3>
+                <p>Chúng tôi luôn sẵn sàng tư vấn và cung cấp giải pháp khóa điện tử phù hợp cho bạn.</p>
+                <a href="tel:+84902950816" class="btn-primary">Gọi ngay: 0902.950.816</a>
+            </div>
+            <div class="contact-item">
+                <h3>Địa chỉ</h3>
+                <p>223 Trường Chinh, TP. Đà Nẵng</p>
+                <p><strong>Giờ mở cửa:</strong> 8:00 AM - 5:00 PM</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Khóa Điện Tử Đà Nẵng. Tất cả quyền lợi được bảo vệ.</p>
+    </footer>
 </body>
 </html>
