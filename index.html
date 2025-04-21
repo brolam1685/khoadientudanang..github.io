@@ -3,92 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Khóa điện tử Đà Nẵng - Chất lượng Châu Âu - Chuyên cung cấp và lắp đặt các loại khóa cửa thông minh, khóa vân tay, khóa thẻ từ chính hãng. Liên hệ ngay: 0902.950.816">
-    <meta name="keywords" content="khóa điện tử đà nẵng, khóa vân tay, khóa thẻ từ, lắp khóa cửa thông minh, khóa thông minh châu âu, khóa vân tay S01, khóa K888, khóa SF90, khóa điện tử cửa">
-    <meta name="author" content="Khóa điện tử Đà Nẵng">
-    <meta property="og:title" content="Khóa Điện Tử Đà Nẵng - Chất Lượng Châu Âu">
-    <meta property="og:description" content="Khóa cửa thông minh, khóa vân tay chính hãng tại Đà Nẵng. Giao hàng & lắp đặt tận nơi.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630">
-    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="description" content="Khóa điện tử chính hãng, khóa thông minh bảo mật cao, lắp đặt nhanh chóng tại Đà Nẵng và TP.HCM. Mua khóa điện tử với giá tốt, giao hàng tận nơi.">
+    <meta name="keywords" content="khóa điện tử, khóa thông minh, khóa vân tay, khóa thẻ từ, mua khóa điện tử, khóa cửa thông minh, khóa Similock">
+    <meta name="author" content="Similock">
+    <meta property="og:title" content="Khóa Điện Tử & Khóa Thông Minh Chính Hãng | Similock">
+    <meta property="og:description" content="Khóa cửa thông minh Similock, giao hàng tận nơi, chính hãng và bảo hành lâu dài. Mua ngay hôm nay!">
+    <meta property="og:image" content="https://yourimage.com/og-image.jpg">
+    <meta property="og:url" content="https://similock.com">
     <meta property="og:type" content="website">
-    <title>Khóa Điện Tử Đà Nẵng - Chất Lượng Châu Âu | Lắp đặt và phân phối khóa thông minh</title>
+    <title>Khóa Điện Tử & Khóa Thông Minh Chính Hãng | Similock</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background-color: #f4f4f4;
         }
         header {
-            background: #003366;
+            background-color: #003366;
             color: white;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
         }
-        .slogan {
-            font-size: 1.5em;
-            margin-top: 10px;
-            font-style: italic;
-            color: #ffc107;
-            text-align: center;
-            animation: slideIn 3s ease-in-out infinite, colorChange 5s ease-in-out infinite;
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            50% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
-
-        @keyframes colorChange {
-            0% {
-                color: #ffc107;
-            }
-            50% {
-                color: #00bcd4;
-            }
-            100% {
-                color: #ffc107;
-            }
-        }
-
-        .banner {
-            background: url('https://via.placeholder.com/1200x400/003366/ffffff?text=SIÊU+SALE+KHÓA+ĐIỆN+TỬ+CHẤT+LƯỢNG+CHÂU+ÂU') center/cover no-repeat;
-            height: 300px;
+        header h1 {
+            margin: 0;
         }
         nav {
-            background: #ffffff;
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         nav a {
             margin: 0 15px;
-            text-decoration: none;
             color: #003366;
+            text-decoration: none;
             font-weight: bold;
         }
         nav a:hover {
             color: #0078FF;
         }
-        section {
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             padding: 40px 20px;
         }
-        h2 {
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
+        }
+        .product-card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-card h3 {
+            font-size: 1.2em;
             color: #003366;
+        }
+        .product-card p {
+            color: #555;
         }
         .btn-primary {
             background-color: #0078FF;
@@ -102,109 +81,70 @@
         .btn-primary:hover {
             background-color: #005fcc;
         }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 20px;
+        .footer {
+            background-color: #003366;
+            color: white;
             text-align: center;
-        }
-        .product-card img {
-            width: 100%;
-            border-radius: 8px;
-            max-height: 200px;
-            object-fit: cover;
-        }
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-between;
-        }
-        .contact-item {
-            flex: 1;
-            min-width: 280px;
-        }
-        iframe {
-            width: 100%;
-            height: 250px;
-            border: 0;
-            border-radius: 10px;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Khóa Điện Tử Đà Nẵng</h1>
-        <p class="slogan">Chất lượng Châu Âu - An tâm bảo vệ tổ ấm</p>
-        <p>223 Trường Chinh, TP. Đà Nẵng | Hotline: <a href="tel:+84902950816" style="color: #ffc107;">0902.950.816</a></p>
+        <h1>Khóa Điện Tử & Khóa Thông Minh Chính Hãng</h1>
+        <p>Similock - Chuyên cung cấp và lắp đặt khóa điện tử, khóa thông minh, khóa vân tay, khóa thẻ từ. Bảo mật cao, tiện lợi, giao hàng tận nơi tại Đà Nẵng và TP.HCM.</p>
     </header>
-
-    <div class="banner"></div>
 
     <nav>
         <a href="#sanpham">Sản phẩm</a>
-        <a href="#video">Giới thiệu</a>
+        <a href="#video">Video giới thiệu</a>
         <a href="#lienhe">Liên hệ</a>
     </nav>
 
     <section id="sanpham">
-        <h2>Sản phẩm nổi bật</h2>
-        <div class="product-grid" id="product-list">
+        <h2>Sản Phẩm Khóa Điện Tử & Khóa Thông Minh</h2>
+        <div class="product-list">
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Khóa Vân Tay Cao Cấp" />
-                <h3>Khóa Vân Tay Cao Cấp</h3>
-                <p>Bảo mật tuyệt đối, mở bằng vân tay và app điện thoại.</p>
+                <img src="https://via.placeholder.com/300x200" alt="Khóa điện tử S01">
+                <h3>Khóa Vân Tay S01</h3>
+                <p>Khóa điện tử S01, bảo mật cao, thiết kế hiện đại, mở cửa bằng vân tay và điện thoại.</p>
                 <p><strong>Giá: 2.500.000đ</strong></p>
                 <a href="https://zalo.me/0902950816" class="btn-primary">Liên hệ mua</a>
             </div>
+
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Khóa Thẻ Từ Khách Sạn" />
-                <h3>Khóa Thẻ Từ Khách Sạn</h3>
-                <p>Quản lý dễ dàng, mở bằng thẻ từ và mã số.</p>
-                <p><strong>Giá: 1.800.000đ</strong></p>
+                <img src="https://via.placeholder.com/300x200" alt="Khóa điện tử K888">
+                <h3>Khóa Vân Tay K888</h3>
+                <p>Khóa vân tay K888, mở cửa bằng vân tay, thẻ từ và mã số.</p>
+                <p><strong>Giá: 2.800.000đ</strong></p>
                 <a href="https://zalo.me/0902950816" class="btn-primary">Liên hệ mua</a>
             </div>
+
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Khóa WiFi Thông Minh" />
-                <h3>Khóa WiFi Thông Minh</h3>
-                <p>Mở từ xa bằng điện thoại, có báo động chống trộm.</p>
-                <p><strong>Giá: 3.200.000đ</strong></p>
+                <img src="https://via.placeholder.com/300x200" alt="Khóa điện tử SF90">
+                <h3>Khóa Thẻ Từ SF90</h3>
+                <p>Khóa thẻ từ SF90, bảo mật cao với hệ thống mã số và thẻ từ.</p>
+                <p><strong>Giá: 2.200.000đ</strong></p>
                 <a href="https://zalo.me/0902950816" class="btn-primary">Liên hệ mua</a>
             </div>
-            <!-- Các sản phẩm khác -->
         </div>
     </section>
 
     <section id="video">
-        <h2>Video giới thiệu</h2>
-        <div style="text-align:center">
-            <iframe width="560" height="315" src="https://www.youtube.com/@Khoathongminhdanang" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <h2>Video Giới Thiệu Khóa Điện Tử Similock</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bUTrz1H0okY" title="YouTube video" frameborder="0" allowfullscreen></iframe>
     </section>
 
-    <section id="lienhe" class="contact">
-        <div class="contact-item">
-            <h3>Liên hệ ngay</h3>
-            <a href="tel:+84902950816" class="btn-primary">📞 Gọi: 0902.950.816</a><br><br>
-            <a href="https://zalo.me/0902950816" class="btn-primary">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width:20px; vertical-align: middle;"> Nhắn Zalo
-            </a><br><br>
-            <a href="https://www.facebook.com/yourpage" class="btn-primary" style="background:#4267B2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width:20px; vertical-align: middle;"> Fanpage Facebook
-            </a>
-        </div>
-        <div class="contact-item">
-            <h3>Địa chỉ</h3>
-            <p>223 Trường Chinh, TP. Đà Nẵng</p>
-            <p><strong>Giờ mở cửa:</strong> 8:00 - 17:00</p>
-            <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen loading="lazy"></iframe>
-        </div>
+    <section id="lienhe">
+        <h2>Liên Hệ</h2>
+        <p>Chúng tôi sẵn sàng tư vấn và cung cấp các sản phẩm khóa điện tử và khóa thông minh chất lượng cao. Liên hệ với chúng tôi ngay để được hỗ trợ nhanh chóng.</p>
+        <a href="https://zalo.me/0902950816" class="btn-primary">Nhắn Zalo</a><br>
+        <a href="https://www.facebook.com/yourpage" class="btn-primary" style="background-color: #4267B2;">Fanpage Facebook</a><br>
+        <p>Địa chỉ: 223 Trường Chinh, TP. Đà Nẵng</p>
     </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Similock. Bảo mật tuyệt đối, chất lượng hàng đầu.</p>
+    </footer>
 </body>
 </html>
