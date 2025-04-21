@@ -1,65 +1,151 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khóa Điện Tử Đà Nẵng | Khóa Thông Minh Chính Hãng</title>
-  <meta name="description" content="Chuyên cung cấp khóa điện tử, khóa cửa thông minh chính hãng tại Đà Nẵng. Sản phẩm chất lượng Châu Âu, lắp đặt tận nơi." />
-  <meta name="keywords" content="khóa điện tử, khóa thông minh, khóa cửa vân tay, khóa thẻ từ, Similock, Đà Nẵng" />
-  <meta name="author" content="Khóa Điện Tử Đà Nẵng" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khóa điện tử Đà Nẵng - Chất lượng Châu Âu, an toàn và tiện lợi cho gia đình, văn phòng. Liên hệ ngay 0902.950.816">
+  <meta name="keywords" content="khóa điện tử, khóa thông minh, khóa cửa vân tay, khóa wifi, Similock Đà Nẵng">
+  <title>Khóa Điện Tử Đà Nẵng - Chất Lượng Châu Âu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #003366;
-      --accent: #007bff;
-      --highlight: #ffc107;
-      --bg: #f9f9f9;
+    body { font-family: 'Poppins', sans-serif; background: #f0f2f5; margin: 0; }
+    header { background: linear-gradient(135deg, #0d47a1, #1976d2); color: white; padding: 2rem; text-align: center; }
+    .slogan { color: #ffc107; animation: slideIn 2s ease-in-out infinite alternate; }
+    @keyframes slideIn { 0% { transform: translateX(-5px); } 100% { transform: translateX(5px); } }
+    nav { background: white; text-align: center; padding: 1rem; position: sticky; top: 0; z-index: 100; }
+    nav a { margin: 0 15px; color: #0d47a1; text-decoration: none; font-weight: bold; }
+    .banner { background: url('https://via.placeholder.com/1600x500/0d47a1/ffffff?text=KHUYẾN+MÃI+SIÊU+SALE+SIMILOCK') center/cover no-repeat; height: 300px; }
+    section { padding: 2rem; max-width: 1100px; margin: auto; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .product-card { background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; }
+    .product-card img { width: 100%; height: 200px; object-fit: cover; }
+    .product-card .info { padding: 1rem; }
+    .form-wrapper { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 2rem; }
+    footer { background: #0d47a1; color: white; text-align: center; padding: 2rem; }
+
+    form input, form select, form textarea {
+      width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    form button {
+      background: #1976d2; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer;
     }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--bg);
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-    }
-    .slogan {
-      font-size: 1.2rem;
-      color: var(--highlight);
-      margin-top: 0.5rem;
-      animation: slideText 3s infinite alternate;
-    }
-    @keyframes slideText {
-      from { transform: translateX(-5px); }
-      to { transform: translateX(5px); }
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      list-style: none;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight
+    form button:hover { background: #0d47a1; }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+</head>
+<body>
+  <header>
+    <h1>Khóa Điện Tử Đà Nẵng</h1>
+    <p class="slogan">Chất lượng Châu Âu - An tâm bảo vệ tổ ấm</p>
+    <p>223 Trường Chinh, TP. Đà Nẵng | <a href="tel:+84902950816" style="color: #ffc107;">0902.950.816</a></p>
+  </header>
+
+  <nav>
+    <a href="#sanpham">Sản phẩm</a>
+    <a href="#video">Video</a>
+    <a href="#form">Đặt hàng</a>
+    <a href="#lienhe">Liên hệ</a>
+  </nav>
+
+  <div class="banner"></div>
+
+  <section id="sanpham">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://similock.com/images/s01.jpg" alt="S01">
+        <div class="info">
+          <h3>Khóa vân tay S01</h3>
+          <p>Giá: Liên hệ</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://similock.com/images/k888.jpg" alt="K888">
+        <div class="info">
+          <h3>Khóa K888</h3>
+          <p>Giá: Liên hệ</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://similock.com/images/s168.jpg" alt="S168">
+        <div class="info">
+          <h3>Khóa S168</h3>
+          <p>Giá: Liên hệ</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://similock.com/images/sf90.jpg" alt="SF90">
+        <div class="info">
+          <h3>Khóa SF90</h3>
+          <p>Giá: Liên hệ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Video giới thiệu</h2>
+    <div class="video-wrapper">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/bUTrz1H0okY" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="form">
+    <h2>Đặt hàng ngay</h2>
+    <div class="form-wrapper">
+      <form>
+        <input type="text" name="name" placeholder="Họ tên" required>
+        <input type="tel" name="phone" placeholder="Số điện thoại" required>
+        <select name="product">
+          <option>Chọn sản phẩm</option>
+          <option>S01</option>
+          <option>K888</option>
+          <option>S168</option>
+          <option>SF90</option>
+        </select>
+        <textarea name="note" rows="4" placeholder="Ghi chú thêm..."></textarea>
+        <button type="submit">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="lienhe">
+    <h2>Liên hệ</h2>
+    <p>📍 223 Trường Chinh, TP. Đà Nẵng</p>
+    <p>📞 <a href="tel:0902950816">0902.950.816</a></p>
+    <p>💬 <a href="https://zalo.me/0902950816" target="_blank">Zalo</a> | <a href="https://m.me/yourpage" target="_blank">Messenger</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Khóa Điện Tử Đà Nẵng - All rights reserved.</p>
+  </footer>
+
+  <!-- Messenger Chat Plugin -->
+  <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "YOUR_PAGE_ID");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    window.fbAsyncInit = function() {
+      FB.init({ xfbml: true, version: 'v18.0' });
+    };
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>
