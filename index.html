@@ -66,25 +66,25 @@
     </div>
   </section>
 
-  <!-- Form đặt hàng -->
+  <!-- Form đặt hàng gửi qua Zalo -->
   <section class="container py-5" id="contact">
     <div class="form-section">
       <h2 class="text-center">Liên hệ & Đặt hàng</h2>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="orderForm">
         <div class="mb-3">
           <label for="name" class="form-label">Họ và tên</label>
-          <input type="text" class="form-control" name="name" required />
+          <input type="text" class="form-control" id="name" name="name" required />
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label">Số điện thoại</label>
-          <input type="tel" class="form-control" name="phone" required />
+          <input type="tel" class="form-control" id="phone" name="phone" required />
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Nội dung yêu cầu</label>
-          <textarea class="form-control" name="message" rows="4" required></textarea>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
         </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-primary px-4">Gửi yêu cầu</button>
+          <button type="submit" class="btn btn-primary px-4">Gửi qua Zalo</button>
         </div>
       </form>
     </div>
@@ -97,12 +97,12 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/@Khoathongminhdanang_VIDEO_ID" title="Giới thiệu cửa hàng" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=@Khoathongminhdanang" title="Kênh YouTube Khóa Thông Minh Đà Nẵng" allowfullscreen></iframe>
         </div>
       </div>
       <div class="col-md-6">
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.456017616934!2d108.20216611533604!3d16.047248644303027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b323e327ad%3A0xb37a4cb4c2b8408a!2zSMOgbmcgQ-G7lSBQaMO6YyBNYW4gVGhvbmc!5e0!3m2!1svi!2s!4v1611325281495!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.456017616934!2d108.20216611533604!3d16.047248644303027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b323e327ad%3A0xb37a4cb4c2b8408a!2zSMOgbmcgQ-G7lSBQaMO6YyBNYW4gVGhvbmc!5e0!3m2!1svi!2s!4v1611325281495!5m2!1svi!2s" style="border:0;" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -114,9 +114,21 @@
     <div class="social-icons">
       <a href="https://zalo.me/0902950816" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="30" alt="Zalo"></a>
       <a href="https://www.facebook.com/khoadientudanangvn" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" width="30" alt="Facebook"></a>
-      <a href="https://www.youtube.com/yourchannel" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="60" alt="YouTube"></a>
+      <a href="https://www.youtube.com/@Khoathongminhdanang" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="60" alt="YouTube"></a>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const zaloId = '0902950816';
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const text = `Đặt hàng từ website:%0AHọ và tên: ${name}%0ASĐT: ${phone}%0AYêu cầu: ${message}`;
+      window.open(`https://zalo.me/${zaloId}?text=${text}`, '_blank');
+    });
+  </script>
 
 </body>
 </html>
