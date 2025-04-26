@@ -9,127 +9,160 @@
   <title>Khóa Điện Tử Đà Nẵng - Lắp đặt tận nơi</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}  
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background-color: #fefefe; color: #333; }
+    body { font-family: 'Segoe UI', sans-serif; background: #fefefe; color: #333; }
     .navbar-brand { font-weight: bold; }
-    .hero { background: linear-gradient(135deg, #1976d2, #64b5f6); color: white; padding: 60px 20px; text-align: center; }
-    .hero .hotline-btn { background-color: #ffffff; color: #1976d2; border: none; font-size: 1.8rem; font-weight: bold; padding: 12px 24px; border-radius: 8px; display: inline-block; text-decoration: none; }
-    .intro { padding: 60px 20px; background: #f9f9f9; text-align: center; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .intro h2 { margin-bottom: 20px; font-size: 2rem; font-weight: 700; color: #1976d2; }
-    .intro p { font-size: 1.1rem; color: #555; max-width: 700px; margin: auto; margin-bottom: 40px; }
-    .features { display: flex; justify-content: center; gap: 30px; }
-    .feature-item { text-align: center; max-width: 200px; }
-    .feature-item i { font-size: 2.5rem; color: #1976d2; background-color: #f0f4f7; padding: 20px; border-radius: 50%; margin-bottom: 15px; transition: all 0.3s ease; }
-    .feature-item i:hover { background-color: #1976d2; color: #fff; }
-    .feature-item p { font-size: 1rem; color: #444; margin: 5px 0; }
-    .form-section { max-width: 500px; margin: 0 auto; background: #f1f8ff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .form-section h2 { margin-bottom: 20px; }
-    .form-control, .btn { border-radius: 8px; font-size: 0.95rem; }
-    .address-note { font-size: 0.95rem; color: #555; }
-    .carousel-item { position: relative; }
-    .carousel-item img { object-fit: cover; height: 200px; border-radius: 12px; width: 100%; }
-    .carousel-caption-custom { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.5); color: #fff; padding: 10px; text-align: left; border-radius: 0 0 12px 12px; }
-    .carousel-caption-custom h5, .carousel-caption-custom p { margin: 0; font-size: 0.9rem; }
-    .footer { background: #0d47a1; color: white; padding: 20px; text-align: center; }
-    .footer a { color: #ffffff; margin: 0 8px; }
-    .social-icons img { margin: 0 5px; }
+    .hero { background: linear-gradient(135deg, #1976d2, #64b5f6); color: #fff; padding: 80px 20px; text-align: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+    .hero .btn { font-size: 1.2rem; padding: 12px 30px; }
+    .intro { padding: 60px 20px; background: #f9f9f9; text-align: center; }
+    .intro h2 { font-size: 2.5rem; color: #1976d2; margin-bottom: 20px; }
+    .intro p { font-size: 1.1rem; color: #555; max-width: 700px; margin: auto; }
+    .features { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+    .feature-item { width: 180px; text-align: center; }
+    .feature-item i { font-size: 2.5rem; color: #1976d2; background: #e3f2fd; padding: 20px; border-radius: 50%; margin-bottom: 15px; }
+    .feature-item h5 { font-size: 1.1rem; margin-bottom: 8px; }
+    .products { padding: 60px 20px; }
+    .products h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
+    .product-card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-card img { border-top-left-radius: 12px; border-top-right-radius: 12px; height: 200px; object-fit: cover; }
+    .testimonial-section { padding: 60px 20px; background: #f9f9f9; }
+    .testimonial-section h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
+    .testimonial-item { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 30px; }
+    .testimonial-item p { font-style: italic; color: #555; }
+    .testimonial-item .author { margin-top: 15px; font-weight: bold; color: #1976d2; }
+    .contact-section { padding: 60px 20px; }
+    .contact-section h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
+    .contact-info { text-align: center; margin-bottom: 30px; }
+    .contact-links a { font-size: 2rem; margin: 0 10px; color: #1976d2; transition: color 0.3s; }
+    .contact-links a:hover { color: #0d47a1; }
+    .map, .video { margin-top: 30px; }
+    footer { background: #0d47a1; color: #fff; padding: 20px; text-align: center; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">Khóa Đà Nẵng</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#intro">Giới thiệu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#intro">Giới Thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Sản Phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Đánh Giá</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Liên Hệ</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Hero -->
+
   <header class="hero" id="intro">
     <h1>Khóa Điện Tử Đà Nẵng</h1>
-    <p>Chuyên lắp đặt khóa vân tay, khóa thông minh tại nhà - Uy tín hàng đầu tại Đà Nẵng</p>
-    <a href="tel:0902950816" class="hotline-btn mt-3">Hotline: 0902.950.816</a>
+    <p>Chuyên lắp đặt khóa vân tay và khóa thông minh tại nhà - Uy tín &amp; Chất lượng</p>
+    <a href="tel:0902950816" class="btn btn-light fw-bold" style="padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">Gọi ngay: <span style="font-size: 1.2rem;">0902.950.816</span></a>
   </header>
-  <!-- Introduction -->
+
   <section class="intro">
     <h2>Về Chúng Tôi</h2>
-    <p>Với hơn 5 năm kinh nghiệm trong ngành, Khóa Điện Tử Đà Nẵng tự hào mang đến giải pháp an toàn, tiện lợi cho ngôi nhà của bạn. Đội ngũ kỹ thuật viên chuyên nghiệp, phục vụ 24/7, đảm bảo lắp đặt nhanh chóng, bảo hành uy tín.</p>
+    <p>Với hơn 5 năm kinh nghiệm, chúng tôi mang đến giải pháp an toàn, tiện lợi cho ngôi nhà của bạn tại Đà Nẵng.</p>
     <div class="features">
-      <div class="feature-item">
-        <i class="bi bi-shield-lock"></i>
-        <p><strong>Uy tín</strong></p>
-        <p>Chúng tôi cam kết sản phẩm chất lượng, bảo hành lâu dài.</p>
+      <div class="feature-item"><i class="bi bi-shield-lock-fill"></i><h5>Uy Tín</h5><p>Sản phẩm chính hãng, bảo hành dài hạn.</p></div>
+      <div class="feature-item"><i class="bi bi-person-rolodex"></i><h5>Chuyên Nghiệp</h5><p>Đội ngũ kỹ thuật viên giàu kinh nghiệm.</p></div>
+      <div class="feature-item"><i class="bi bi-headset"></i><h5>Hỗ Trợ 24/7</h5><p>Luôn sẵn sàng tư vấn và hỗ trợ.</p></div>
+    </div>
+  </section>
+
+  <section class="products container" id="products">
+    <h2>Sản Phẩm Nổi Bật</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/400x200?text=Samsung" class="card-img-top" alt="Khoá Vân Tay Samsung">
+          <div class="card-body text-center">
+            <h5 class="card-title">Khoá Vân Tay Samsung</h5>
+            <p class="card-text">Bảo mật cao, thiết kế sang trọng.</p>
+            <p class="fw-bold text-primary">2.250.000đ</p>
+          </div>
+        </div>
       </div>
-      <div class="feature-item">
-        <i class="bi bi-person-circle"></i>
-        <p><strong>Chuyên nghiệp</strong></p>
-        <p>Đội ngũ kỹ thuật viên giàu kinh nghiệm, phục vụ tận tâm.</p>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/400x200?text=Kaadas" class="card-img-top" alt="Khoá Thẻ Kaadas">
+          <div class="card-body text-center">
+            <h5 class="card-title">Khoá Thẻ Từ Kaadas</h5>
+            <p class="card-text">Tiện lợi, dễ sử dụng.</p>
+            <p class="fw-bold text-primary">3.500.000đ</p>
+          </div>
+        </div>
       </div>
-      <div class="feature-item">
-        <i class="bi bi-gear"></i>
-        <p><strong>Bảo hành</strong></p>
-        <p>Cung cấp dịch vụ bảo hành toàn diện, hỗ trợ 24/7.</p>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/400x200?text=Smartlock" class="card-img-top" alt="Bluetooth Smartlock">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bluetooth Smartlock</h5>
+            <p class="card-text">Điều khiển từ xa qua điện thoại.</p>
+            <p class="fw-bold text-primary">2.800.000đ</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- Sản phẩm -->
-  <section class="container py-5" id="products">
-    <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
-    <div class="row">
-      <!-- Product 1 -->
-      <div class="col-md-4 text-center">
-        <div id="slider1" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active"><img src="https://via.placeholder.com/600x480?text=Xingfa+1" class="d-block w-100"><div class="carousel-caption-custom"><h5>Khóa cửa nhôm Xingfa</h5><p>Giá: 2.250.000đ</p></div></div>
-            <div class="carousel-item"><img src="https://via.placeholder.com/600x480?text=Xingfa+2" class="d-block w-100"><div class="carousel-caption-custom"><h5>Khóa cửa nhôm Xingfa</h5><p>Giá: 2.250.000đ</p></div></div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#slider1" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next" type="button" data-bs-target="#slider1" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-        </div>
-        <a href="#contact" class="btn btn-outline-primary btn-order mt-3">Đặt hàng</a>
-      </div>
-      <!-- Product 2 -->
-      <div class="col-md-4 text-center">
-        <div id="slider2" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active"><img src="https://via.placeholder.com/600x480?text=FaceID+1" class="d-block w-100"><div class="carousel-caption-custom"><h5>Khóa điện tử FaceID</h5><p>Giá: 3.500.000đ</p></div></div>
-            <div class="carousel-item"><img src="https://via.placeholder.com/600x480?text=FaceID+2" class="d-block w-100"><div class="carousel-caption-custom"><h5>Khóa điện tử FaceID</h5><p>Giá: 3.500.000đ</p></div></div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#slider2" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next" type="button" data-bs-target="#slider2" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-        </div>
-        <a href="#contact" class="btn btn-outline-primary btn-order mt-3">Đặt hàng</a>
-      </div>
-      <!-- Product 3 -->
-      <div class="col-md-4 text-center">
-        <div id="slider3" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active"><img src="https://via.placeholder.com/600x480?text=Sat+1" class="d-block w-100"><div class="carousel-caption-custom"><h5>Khóa cửa sắt</h5><p>Giá: 2.800.000đ</p></div></div>
-            <div class="carousel-item"><img src="https://via.placeholder.com/600x480?text=Sat+2" class="d-block w-100"><div class="carousel-caption-custom"><h5>Khóa cửa sắt</h5><p>Giá: 2.800.000đ</p></div></div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#slider3" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next" type="button" data-bs-target="#slider3" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-        </div>
-        <a href="#contact" class="btn btn-outline-primary btn-order mt-3">Đặt hàng</a>
+
+  <section class="testimonial-section" id="testimonials">
+    <h2>Khách Hàng Nói Gì?</h2>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4"><div class="testimonial-item"><p>"Sản phẩm chính hãng, lắp đặt nhanh chóng!"</p><div class="author">- Anh Hưng</div></div></div>
+        <div class="col-md-4"><div class="testimonial-item"><p>"Dịch vụ tận tình, giá cả hợp lý."</p><div class="author">- Chị Mai</div></div></div>
+        <div class="col-md-4"><div class="testimonial-item"><p>"Sẽ giới thiệu cho bạn bè!"</p><div class="author">- Anh Tuấn</div></div></div>
       </div>
     </div>
   </section>
-  <!-- Contact Form -->
-  <section class="container py-5" id="contact">
-    <div class="form-se
+
+  <section class="contact-section container" id="contact">
+    <h2 class="text-center text-primary mb-4">Liên Hệ Với Chúng Tôi</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center">
+        <h4><strong>Hotline</strong></h4>
+        <p class="fw-bold" style="font-size: 1.5rem; color: #1976d2;">0902.950.816</p>
+        <a href="tel:0902950816" class="btn btn-outline-primary" style="border-radius: 50px; padding: 10px 30px;">Gọi Ngay</a>
+      </div>
+      <div class="col-md-4 text-center mt-4 mt-md-0">
+        <h4><strong>Địa chỉ</strong></h4>
+        <p style="font-size:1.2rem;">223 Trường Chinh, TP. Đà Nẵng</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center">
+        <h5 class="mb-3">Kết nối với chúng tôi qua mạng xã hội</h5>
+        <div class="contact-links">
+          <a href="https://zalo.me/0902950816" target="_blank" class="mx-2"><i class="bi bi-chat-dots-fill" style="font-size:2rem; color:#1976d2"></i></a>
+          <a href="https://www.facebook.com/khoadientudanangvn" target="_blank" class="mx-2"><i class="bi bi-facebook" style="font-size:2rem; color:#1976d2"></i></a>
+          <a href="https://www.youtube.com/channel/yourchannel" target="_blank" class="mx-2"><i class="bi bi-youtube" style="font-size:2rem; color:#1976d2"></i></a>
+        </div>
+
+        <div class="video mt-4">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="map mt-4">
+          <iframe width="100%" height="200" src="https://maps.google.com/maps?q=Da+Nang,+Vietnam&z=14&output=embed" frameborder="0" style="border:0;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
+  </footer>
+    <p>&copy; 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
