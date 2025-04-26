@@ -14,9 +14,12 @@
     body { font-family: 'Segoe UI', sans-serif; background: #fefefe; color: #333; }
     .navbar-brand { font-weight: bold; }
     .hero { background: linear-gradient(135deg, #1976d2, #64b5f6); color: #fff; padding: 80px 20px; text-align: center; }
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
     .hero p { font-size: 1.2rem; margin-bottom: 30px; }
-    .hero .btn { font-size: 1.2rem; padding: 12px 30px; }
+    .btn-call { font-size: 1.2rem; padding: 12px 30px; border-radius: 30px; background-color: #ff4e50; color: #fff; border: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s; text-decoration: none; }
+    .btn-call:hover { transform: scale(1.05); }
+    .btn-call i { font-size: 1.5rem; animation: ring 2s infinite; }
+    @keyframes ring { 0%,50%,100% { transform: rotate(0deg);} 10%,30% { transform: rotate(15deg);} 20%,40% { transform: rotate(-10deg);} }
     .intro { padding: 60px 20px; background: #f9f9f9; text-align: center; }
     .intro h2 { font-size: 2.5rem; color: #1976d2; margin-bottom: 20px; }
     .intro p { font-size: 1.1rem; color: #555; max-width: 700px; margin: auto; }
@@ -24,11 +27,12 @@
     .feature-item { width: 180px; text-align: center; }
     .feature-item i { font-size: 2.5rem; color: #1976d2; background: #e3f2fd; padding: 20px; border-radius: 50%; margin-bottom: 15px; }
     .feature-item h5 { font-size: 1.1rem; margin-bottom: 8px; }
+    .feature-item p { font-size: 1rem; }
     .products { padding: 60px 20px; }
     .products h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
     .product-card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
     .product-card:hover { transform: translateY(-5px); }
-    .product-card img { border-top-left-radius: 12px; border-top-right-radius: 12px; height: 200px; object-fit: cover; }
+    .product-card img { border-radius: 12px 12px 0 0; height: 200px; object-fit: cover; }
     .testimonial-section { padding: 60px 20px; background: #f9f9f9; }
     .testimonial-section h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
     .testimonial-item { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 30px; }
@@ -40,52 +44,14 @@
     .contact-links a { font-size: 2rem; margin: 0 10px; color: #1976d2; transition: color 0.3s; }
     .contact-links a:hover { color: #0d47a1; }
     .map, .video { margin-top: 30px; }
-    footer { background: #0d47a1; color: #fff; padding: 20px; text-align: center; }
-    /* Extra styles */
-    .animated-text {
-      font-size: 48px;
-      font-weight: bold;
-      background: linear-gradient(270deg, #ff4e50, #f9d423, #24fe41);
-      background-size: 600% 600%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientMove 5s ease infinite;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .call-now {
-      font-size: 36px;
-      font-weight: bold;
-      color: #ff0000;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      animation: pulseShake 1.5s infinite;
-      margin-top: 20px;
-    }
-    .call-icon {
-      font-size: 40px;
-      animation: ring 2s infinite;
-    }
-    @keyframes pulseShake {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.7; }
-    }
-    @keyframes ring {
-      0% { transform: rotate(0deg); }
-      10% { transform: rotate(15deg); }
-      20% { transform: rotate(-10deg); }
-      30% { transform: rotate(15deg); }
-      40% { transform: rotate(-10deg); }
-      50% { transform: rotate(0deg); }
-      100% { transform: rotate(0deg); }
-    }
+    footer { background: #0d47a1; color: #fff; padding: 40px 20px; text-align: center; }
+    footer .footer-links a { color: #fff; margin: 0 15px; font-size: 1.2rem; text-decoration: none; transition: color 0.3s; }
+    footer .footer-links a:hover { color: #f9d423; }
+    footer .social-icons a { font-size: 2rem; margin: 0 15px; color: #fff; transition: color 0.3s; }
+    footer .social-icons a:hover { color: #f9d423; }
+    footer .footer-bottom { margin-top: 20px; font-size: 1rem; }
   </style>
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
@@ -107,11 +73,7 @@
   <header class="hero" id="intro">
     <h1>Khóa Điện Tử Đà Nẵng</h1>
     <p>Chuyên lắp đặt khóa vân tay và khóa thông minh tại nhà - Uy tín &amp; Chất lượng</p>
-
-    <div class="call-now">
-      <div class="call-icon">📞</div>
-      Gọi Ngay: 0902.950.816
-    </div>
+    <a href="tel:0902950816" class="btn-call"><i class="bi bi-telephone-fill"></i> Gọi Ngay: 0902.950.816</a>
   </header>
 
   <section class="intro">
@@ -129,7 +91,7 @@
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card product-card">
-          <img src="https://via.placeholder.com/400x200?text=Samsung" class="card-img-top" alt="">
+          <img src="https://via.placeholder.com/400x200?text=Samsung" class="card-img-top" alt="Samsung Lock">
           <div class="card-body text-center">
             <h5 class="card-title">Khoá Vân Tay Cửa Xingfa</h5>
             <p class="card-text">Bảo mật cao, thiết kế sang trọng.</p>
@@ -139,7 +101,7 @@
       </div>
       <div class="col-md-4">
         <div class="card product-card">
-          <img src="https://via.placeholder.com/400x200?text=Kaadas" class="card-img-top" alt="">
+          <img src="https://via.placeholder.com/400x200?text=Kaadas" class="card-img-top" alt="Kaadas Lock">
           <div class="card-body text-center">
             <h5 class="card-title">Khoá Kết Nối Wifi - FACEID</h5>
             <p class="card-text">Tiện lợi, dễ sử dụng.</p>
@@ -149,7 +111,7 @@
       </div>
       <div class="col-md-4">
         <div class="card product-card">
-          <img src="https://via.placeholder.com/400x200?text=Smartlock" class="card-img-top" alt="">
+          <img src="https://via.placeholder.com/400x200?text=Smartlock" class="card-img-top" alt="Smartlock">
           <div class="card-body text-center">
             <h5 class="card-title">Khóa vân tay cổng cửa sắt</h5>
             <p class="card-text">Điều khiển từ xa qua điện thoại.</p>
@@ -190,7 +152,6 @@
         <h5 class="mb-3">Kết nối với chúng tôi qua mạng xã hội</h5>
         <div class="contact-links">
           <a href="https://zalo.me/0902950816" target="_blank"><i class="bi bi-chat-dots-fill"></i></a>
-          <a href="https://www.facebook.com/khoadientudanangvn" target="_blank"><i class="bi bi-facebook"></i></a>
           <a href="https://www.youtube.com/channel/@Khoathongminhdanang" target="_blank"><i class="bi bi-youtube"></i></a>
         </div>
 
@@ -206,7 +167,19 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#intro">Giới Thiệu</a>
+      <a href="#products">Sản Phẩm</a>
+      <a href="#testimonials">Đánh Giá</a>
+      <a href="#contact">Liên Hệ</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://zalo.me/0902950816" target="_blank"><i class="bi bi-chat-dots-fill"></i></a>
+      <a href="https://www.youtube.com/channel/@Khoathongminhdanang" target="_blank"><i class="bi bi-youtube"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
