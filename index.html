@@ -64,8 +64,77 @@
   <header class="hero" id="intro">
     <h1>Khóa Điện Tử Đà Nẵng</h1>
     <p>Chuyên lắp đặt khóa vân tay và khóa thông minh tại nhà - Uy tín &amp; Chất lượng</p>
-    <a href="tel:0902950816" class="btn btn-light fw-bold" style="padding: 15px 40px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"><!DOCTYPE html>
-<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Animation</title>
+<style>
+  .animated-text {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff4e50, #f9d423, #24fe41);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s ease infinite;
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* HIỆU ỨNG CHO GỌI NGAY */
+  .call-now {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff0000;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    animation: pulseShake 1.5s infinite;
+  }
+
+  .call-icon {
+    font-size: 40px;
+    animation: ring 2s infinite;
+  }
+
+  @keyframes pulseShake {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes ring {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="animated-text">Chữ hiệu ứng đẹp</div>
+
+<br><br>
+
+<div class="call-now">
+  <div class="call-icon">📞</div>
+  Gọi Ngay : 0902.950.816
+</div>
+
+</body>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
