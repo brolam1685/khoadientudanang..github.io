@@ -8,6 +8,7 @@
   <meta name="author" content="Khóa Điện Tử Đà Nẵng" />
   <title>Khóa Điện Tử Đà Nẵng - Lắp đặt tận nơi</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -21,9 +22,14 @@
     .navbar-brand { font-weight: bold; }
     .hero { background: linear-gradient(135deg, #1976d2, #64b5f6); color: white; padding: 60px 20px; text-align: center; }
     .hero .hotline-btn { background-color: #ffffff; color: #1976d2; border: none; font-size: 1.8rem; font-weight: bold; padding: 12px 24px; border-radius: 8px; display: inline-block; text-decoration: none; }
-    .intro { padding: 60px 20px; background: #f9f9f9; text-align: center; }
-    .intro h2 { margin-bottom: 20px; font-size: 2rem; }
-    .intro p { font-size: 1.1rem; color: #555; max-width: 700px; margin: auto; }
+    .intro { padding: 60px 20px; background: #f9f9f9; text-align: center; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .intro h2 { margin-bottom: 20px; font-size: 2rem; font-weight: 700; color: #1976d2; }
+    .intro p { font-size: 1.1rem; color: #555; max-width: 700px; margin: auto; margin-bottom: 40px; }
+    .features { display: flex; justify-content: center; gap: 30px; }
+    .feature-item { text-align: center; max-width: 200px; }
+    .feature-item i { font-size: 2.5rem; color: #1976d2; background-color: #f0f4f7; padding: 20px; border-radius: 50%; margin-bottom: 15px; transition: all 0.3s ease; }
+    .feature-item i:hover { background-color: #1976d2; color: #fff; }
+    .feature-item p { font-size: 1rem; color: #444; margin: 5px 0; }
     .form-section { max-width: 500px; margin: 0 auto; background: #f1f8ff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
     .form-section h2 { margin-bottom: 20px; }
     .form-control, .btn { border-radius: 8px; font-size: 0.95rem; }
@@ -64,6 +70,23 @@
   <section class="intro">
     <h2>Về Chúng Tôi</h2>
     <p>Với hơn 5 năm kinh nghiệm trong ngành, Khóa Điện Tử Đà Nẵng tự hào mang đến giải pháp an toàn, tiện lợi cho ngôi nhà của bạn. Đội ngũ kỹ thuật viên chuyên nghiệp, phục vụ 24/7, đảm bảo lắp đặt nhanh chóng, bảo hành uy tín.</p>
+    <div class="features">
+      <div class="feature-item">
+        <i class="bi bi-shield-lock"></i>
+        <p><strong>Uy tín</strong></p>
+        <p>Chúng tôi cam kết sản phẩm chất lượng, bảo hành lâu dài.</p>
+      </div>
+      <div class="feature-item">
+        <i class="bi bi-person-circle"></i>
+        <p><strong>Chuyên nghiệp</strong></p>
+        <p>Đội ngũ kỹ thuật viên giàu kinh nghiệm, phục vụ tận tâm.</p>
+      </div>
+      <div class="feature-item">
+        <i class="bi bi-gear"></i>
+        <p><strong>Bảo hành</strong></p>
+        <p>Cung cấp dịch vụ bảo hành toàn diện, hỗ trợ 24/7.</p>
+      </div>
+    </div>
   </section>
   <!-- Sản phẩm -->
   <section class="container py-5" id="products">
@@ -107,44 +130,6 @@
       </div>
     </div>
   </section>
-  <!-- Liên hệ & Đặt hàng -->
+  <!-- Contact Form -->
   <section class="container py-5" id="contact">
-    <div class="form-section">
-      <h2 class="text-center">Liên hệ & Đặt hàng</h2>
-      <form id="orderForm">
-        <div class="mb-3"><label for="name" class="form-label">Họ và tên</label><input type="text" id="name" class="form-control" required></div>
-        <div class="mb-3"><label for="phone" class="form-label">Số điện thoại</label><input type="tel" id="phone" class="form-control" required></div>
-        <div class="mb-3"><label for="message" class="form-label">Nội dung yêu cầu</label><textarea id="message" rows="4" class="form-control" required></textarea></div>
-        <div class="text-center"><button type="submit" class="btn btn-primary">Gửi qua Zalo</button></div>
-      </form>
-    </div>
-  </section>
-  <!-- Bản đồ + YouTube -->
-  <section class="container py-5">
-    <h2 class="text-center mb-4">Địa chỉ cửa hàng</h2>
-    <p class="text-center address-note">223 Trường Chinh, Tp. Đà Nẵng | Hotline: 0902.950.816</p>
-    <div class="row">
-      <div class="col-md-6 mb-4"><div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed?listType=user_uploads&list=@Khoathongminhdanang" title="YouTube" allowfullscreen></iframe></div></div>
-      <div class="col-md-6"><div class="ratio ratio-16x9"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.456017616934!2d108.20216611533604!3d16.047248644303027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b323e327ad:0xb37a4cb4c2b8408a!2zSMOgbmcgQ-G7lSBQaMO6YyBNYW4gVGhvbmc!5e0!3m2!1svi!2s!4v1611325281495!5m2!1svi!2s" allowfullscreen loading="lazy"></iframe></div></div>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Khóa Điện Tử Đà Nẵng | Hotline: 0902.950.816 | Địa chỉ: 223 Trường Chinh, Tp. Đà Nẵng</p>
-    <div class="social-icons">
-      <a href="https://zalo.me/0902950816" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="30" alt="Zalo"></a>
-      <a href="https://www.facebook.com/khoadientudanangvn" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" width="30" alt="Facebook"></a>
-      <a href="https://www.youtube.com/@Khoathongminhdanang" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="60" alt="YouTube"></a>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const zaloId = '0902950816';
-      const text = `Đặt hàng từ website:%0AHọ và tên: ${document.getElementById('name').value}%0ASĐT: ${document.getElementById('phone').value}%0AYêu cầu: ${document.getElementById('message').value}`;
-      window.open(`https://zalo.me/${zaloId}?text=${text}`, '_blank');
-    });
-  </script>
-</body>
-</html>
+    <div class="form-se
