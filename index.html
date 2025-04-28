@@ -120,18 +120,44 @@
     </div>
   </div>
 
+<!-- Automatic Image Resize Styles -->
+<style>
+  /* Ensure images always fill the card width and maintain aspect ratio */
+  .product-card .swiper-slide img,
+  .product-card .card-img-top {
+    display: block;
+    width: 100%;       /* full width of container */
+    height: auto;      /* height adjusts to maintain aspect ratio */
+    max-height: 250px; /* optional max-height for consistency */
+    object-fit: cover; /* crop excess to fill container */
+  }
+</style>
+
+<!-- Product 1 -->
+<div class="col-md-4">
+  <div class="card product-card">
+    <!-- Image from Google Drive -->
+    <img src="https://drive.google.com/uc?export=view&id=1NTSFtSN9I8jlZT9ugc91GKDYsaE76kpj" class="card-img-top">
+
+    <!-- Card Body -->
+    <div class="card-body text-center">
+      <h5 class="card-title">Khoá Cửa Nhôm Xingfa</h5>
+      <p class="card-text">Sản phẩm cao cấp, bảo mật tối ưu.</p>
+      <p class="fw-bold text-primary">2.250.000đ</p>
+    </div>
+  </div>
+</div>
+
 <!-- Product 2 -->
 <div class="col-md-4">
   <div class="card product-card">
     <div class="swiper productSwiper2">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <!-- Hình ảnh Imgur thay thế -->
-          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top" alt="Khoá Kết Nối Wifi - FACEID">
+          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top">
         </div>
         <div class="swiper-slide">
-          <!-- Hình ảnh khác từ Imgur hoặc GitHub -->
-          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top" alt="Khoá Kết Nối Wifi - FACEID">
+          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top">
         </div>
       </div>
       <div class="swiper-pagination"></div>
