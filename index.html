@@ -88,7 +88,7 @@
 
   <section class="products container" id="products">
     <h2>Sản Phẩm Nổi Bật</h2>
-   <!-- Swiper CSS -->
+<!-- Swiper CSS -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -147,7 +147,53 @@
     <div class="card product-card">
       <div class="swiper productSwiper3">
         <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/smartlock-1.jpg" class="card-img-top" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/smartlock-2.jpg" class="card-img-top" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="card-body text-center">
+        <h5 class="card-title">Khóa vân tay cổng cửa sắt</h5>
+        <p class="card-text">Điều khiển từ xa qua điện thoại.</p>
+        <p class="fw-bold text-primary">2.800.000đ</p>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Init Swiper for each product -->
+<script>
+  var swiper1 = new Swiper(".productSwiper1", {
+    loop: true,
+    pagination: {
+      el: ".productSwiper1 .swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var swiper2 = new Swiper(".productSwiper2", {
+    loop: true,
+    pagination: {
+      el: ".productSwiper2 .swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var swiper3 = new Swiper(".productSwiper3", {
+    loop: true,
+    pagination: {
+      el: ".productSwiper3 .swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
 
           </div>
         </div>
