@@ -98,6 +98,7 @@
 <!-- Automatic Image Resize Styles -->
 <style>
   /* Ensure images always fill the card width and maintain aspect ratio */
+  <style>
   .product-card .swiper-slide img,
   .product-card .card-img-top {
     display: block;
@@ -105,10 +106,9 @@
     height: auto;
     max-height: 250px;
     object-fit: cover;
-    cursor: pointer; /* show pointer when hovering */
+    cursor: pointer;
   }
 
-  /* Lightbox backdrop style */
   .lightbox {
     display: none;
     position: fixed;
@@ -127,107 +127,111 @@
   }
 </style>
 
-<!-- Lightbox structure -->
+<!-- Lightbox -->
 <div id="lightbox" class="lightbox">
   <img id="lightbox-img" src="" alt="">
 </div>
 
-<!-- Product 1 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/RvQ2tJD.jpeg" class="card-img-top" alt="Khoá Cửa Nhôm Xingfa">
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <div class="swiper productSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://i.imgur.com/RvQ2tJD.jpeg" class="card-img-top" alt="Khoá Cửa Nhôm Xingfa">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Khoá Cửa Nhôm Xingfa</h5>
+            <p class="fw-bold text-primary">Giá : 2.250.000đ</p>
+            <p class="card-text">Sản phẩm cao cấp, bảo mật tối ưu.</p>
+            <p class="card-text">Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa khóa cơ, app điện thoại. Ruột khóa inox 304, thân khóa 3085.</p>
+            <p class="card-text">Miễn Phí Lắp Đặt & Bảo Hành 24 tháng tận nhà.</p>
+          </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <div class="card-body text-center">
-      <h5 class="card-title">Khoá Cửa Nhôm Xingfa</h5>
-      <p class="fw-bold text-primary">Giá : 2.250.000đ</p>
-      <p class="card-text">Sản phẩm cao cấp, bảo mật tối ưu.</p>
-       <p class="card-text">Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa khóa cơ dự phòng, app trên điện thoại. Ruột khóa bằng inox 304 với 2 chốt, kích thước thân khóa 3085.</p>
-       <p class="card-text">Miễn Phí Lắp Đặt và Bảo Hành 24 tháng tận nhà</p>
-      
+
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <div class="swiper productSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top" alt="Khoá Kết Nối Wifi - FACEID">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Khoá Kết Nối Wifi - FACEID</h5>
+            <p class="fw-bold text-primary">Giá: 3.500.000đ</p>
+            <p class="card-text">Tiện lợi, dễ sử dụng, nhận diện FaceID cực nhanh.</p>
+            <p class="card-text">Điều khiển qua điện thoại, bảo mật cao cấp.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <div class="swiper productSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://i.imgur.com/ubAfHKX.jpeg" class="card-img-top" alt="Khóa Cổng Cửa Sắt">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Khóa Cổng Cửa Sắt</h5>
+            <p class="fw-bold text-primary">Giá: 2.800.000đ</p>
+            <p class="card-text">Dành cho cửa sắt, an toàn tuyệt đối.</p>
+            <p class="card-text">5 tính năng: mật khẩu, vân tay, thẻ từ, chìa cơ, app điện thoại.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
 
-<!-- Khởi tạo Swiper.js -->
+<!-- Swiper và Lightbox Script -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-  // Nếu chỉ có 1 slide, tắt loop để tránh ảnh nhân đôi
-  var swiper = new Swiper('.productSwiper2', {
-    loop: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+  // Khởi tạo Swiper cho tất cả productSwiper
+  var swipers = document.querySelectorAll('.productSwiper');
+  swipers.forEach(function (el) {
+    new Swiper(el, {
+      loop: false,
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+    });
+  });
+
+  // Lightbox khi click ảnh
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.card-img-top').forEach(img => {
+    img.addEventListener('click', function () {
+      lightboxImg.src = this.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  lightbox.addEventListener('click', function () {
+    lightbox.style.display = 'none';
   });
 </script>
 
-
-<!-- Product 2 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top">
-        </div>
-
-        </div>
-      </div>
-      <div class="swiper-pagination">
-        
-      </div>
-    </div>
-    <div class="card-body text-center">
-      <h5 class="card-title">Khoá Kết Nối Wifi - FACEID</h5>
-      <p class="card-text">Tiện lợi, dễ sử dụng.</p>
-      <p class="fw-bold text-primary">3.500.000đ</p>
-    </div>
-  </div>
-</div>
-    <!-- Product 3 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper3">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/ubAfHKX.jpeg" class="card-img-top" alt="Khóa cổng cửa sắt">
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <div class="card-body text-center">
-      <h7 class="card-title">Khóa cổng cửa sắt</h7>
-      <p class="fw-bold text-primary">Giá : 2.800.000đ</p>
-      <p class="card-text">Sản phẩm cao cấp, bảo mật tối ưu.</p>
-       <p class="card-text">Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa khóa cơ dự phòng, app trên điện thoại. Ruột khóa bằng inox 304 với 2 chốt, kích thước thân khóa 3085.</p>
-       <p class="card-text">Miễn Phí Lắp Đặt và Bảo Hành 24 tháng tận nhà</p>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Khởi tạo Swiper.js -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  // Nếu chỉ có 1 slide, tắt loop để tránh ảnh nhân đôi
-  var swiper = new Swiper('.productSwiper3', {
-    loop: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-</script>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="testimonial-section" id="testimonials">
     <h2>Khách Hàng Nói Gì?</h2>
