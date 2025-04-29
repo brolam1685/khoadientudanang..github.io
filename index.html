@@ -190,49 +190,10 @@
     </div>
   </div>
 </div>
-<!-- Product 4 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top">
-        </div>
-
-        </div>
-      </div>
-      <div class="swiper-pagination">
-        
-      </div>
-    </div>
-    <div class="card-body text-center">
-      <h6 class="card-title">Khoá Kết Nối Wifi - FACEID</h6>
-      <p class="card-text">Tiện lợi, dễ sử dụng.</p>
-      <p class="fw-bold text-primary">3.500.000đ</p>
-    </div>
-  </div>
-</div>
-<!-- Lightbox Script -->
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-
-  document.querySelectorAll('.product-card img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.style.display = 'flex';
-    });
-  });
-
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-</script>  
     <!-- Product 3 -->
 <div class="col-md-4">
   <div class="card product-card">
-    <div class="swiper productSwiper2">
+    <div class="swiper productSwiper3">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="https://i.imgur.com/ubAfHKX.jpeg" class="card-img-top" alt="Khóa cổng cửa sắt">
@@ -255,7 +216,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
   // Nếu chỉ có 1 slide, tắt loop để tránh ảnh nhân đôi
-  var swiper = new Swiper('.productSwiper2', {
+  var swiper = new Swiper('.productSwiper3', {
     loop: false,
     pagination: {
       el: '.swiper-pagination',
