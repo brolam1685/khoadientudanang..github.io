@@ -1,337 +1,305 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chuyên cung cấp và lắp đặt khóa điện tử, khóa cửa vân tay tại Đà Nẵng. Uy tín - Chất lượng - Giá tốt. Tư vấn miễn phí 24/7." />
-  <meta name="keywords" content="khóa điện tử Đà Nẵng, khóa cửa thông minh Đà Nẵng, lắp khóa vân tay Đà Nẵng, khóa cửa điện tử giá rẻ Đà Nẵng" />
-  <meta name="author" content="Khóa Điện Tử Đà Nẵng" />
-  <meta name="google-site-verification" content="7RwDTKi5Cz5n6GL8SCMv3BdGbiQpwkh6dxu8NDM9_NU" />
-  <title>Khóa Điện Tử Đà Nẵng - Lắp đặt tận nơi</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khóa điện tử tại Đà Nẵng - Lắp đặt khóa thông minh, khóa cửa vân tay, khóa cửa điện tử uy tín và chất lượng.">
+  <meta name="keywords" content="khóa điện tử, khóa cửa thông minh, khóa vân tay, khóa cửa vân tay, khóa cửa điện tử Đà Nẵng">
+  <meta name="author" content="Khóa Điện Tử Đà Nẵng">
+  <title>Khóa Điện Tử Đà Nẵng - Lắp Đặt Khóa Thông Minh</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXX');
+  </script>
+
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #fefefe; color: #333; }
-    .navbar-brand { font-weight: bold; }
-    .hero { background: linear-gradient(135deg, #1976d2, #64b5f6); color: #fff; padding: 80px 20px; text-align: center; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
-    .btn-call { font-size: 1.2rem; padding: 12px 30px; border-radius: 30px; background-color: #ff4e50; color: #fff; border: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s; text-decoration: none; }
-    .btn-call:hover { transform: scale(1.05); }
-    .btn-call i { font-size: 1.5rem; animation: ring 2s infinite; }
-    @keyframes ring { 0%,50%,100% { transform: rotate(0deg);} 10%,30% { transform: rotate(15deg);} 20%,40% { transform: rotate(-10deg);} }
-    .intro { padding: 60px 20px; background: #f9f9f9; text-align: center; }
-    .intro h2 { font-size: 2.5rem; color: #1976d2; margin-bottom: 20px; }
-    .intro p { font-size: 1.1rem; color: #555; max-width: 700px; margin: auto; }
-    .features { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
-    .feature-item { width: 180px; text-align: center; }
-    .feature-item i { font-size: 2.5rem; color: #1976d2; background: #e3f2fd; padding: 20px; border-radius: 50%; margin-bottom: 15px; }
-    .feature-item h5 { font-size: 1.1rem; margin-bottom: 8px; }
-    .feature-item p { font-size: 1rem; }
-    .products { padding: 60px 20px; }
-    .products h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
-    .product-card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .product-card:hover { transform: translateY(-5px); }
-    .product-card img { border-radius: 12px 12px 0 0; height: 200px; object-fit: cover; }
-    .testimonial-section { padding: 60px 20px; background: #f9f9f9; }
-    .testimonial-section h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
-    .testimonial-item { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 30px; }
-    .testimonial-item p { font-style: italic; color: #555; }
-    .testimonial-item .author { margin-top: 15px; font-weight: bold; color: #1976d2; }
-    .contact-section { padding: 60px 20px; }
-    .contact-section h2 { text-align: center; color: #1976d2; margin-bottom: 40px; font-size: 2rem; }
-    .contact-info { text-align: center; margin-bottom: 30px; }
-    .contact-links a { font-size: 2rem; margin: 0 10px; color: #1976d2; transition: color 0.3s; }
-    .contact-links a:hover { color: #0d47a1; }
-    .map, .video { margin-top: 30px; }
-    footer { background: #0d47a1; color: #fff; padding: 40px 20px; text-align: center; }
-    footer .footer-links a { color: #fff; margin: 0 15px; font-size: 1.2rem; text-decoration: none; transition: color 0.3s; }
-    footer .footer-links a:hover { color: #f9d423; }
-    footer .social-icons a { font-size: 2rem; margin: 0 15px; color: #fff; transition: color 0.3s; }
-    footer .social-icons a:hover { color: #f9d423; }
-    footer .footer-bottom { margin-top: 20px; font-size: 1rem; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; }
+    nav.navbar { background-color: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1030; }
+    .navbar-brand { font-weight: bold; color: #0d6efd; }
+    header { background-color: #ffffff; }
+    section { padding: 60px 0; }
+    footer {
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
+      color: #fff;
+      padding: 20px 0;
+    }
+    .btn-lg { padding: 12px 24px; font-size: 1.25rem; }
+    .icon-box { text-align: center; margin-bottom: 30px; }
+    .icon-box i { color: #0d6efd; margin-bottom: 10px; font-size: 3rem; }
+    .icon-box h5 { font-weight: bold; margin-bottom: 10px; }
+    #map { width: 100%; height: 450px; border: 0; }
   </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Khóa Đà Nẵng</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand" href="#">Khóa Điện Tử Đà Nẵng</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navMenu">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#intro">Giới Thiệu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Sản Phẩm</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Đánh Giá</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Liên Hệ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gioi-thieu">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#san-pham">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="#danh-gia">Đánh giá</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dat-hang">Đặt hàng</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lien-he">Liên hệ</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="hero" id="intro">
-    <h1>Khóa Điện Tử Đà Nẵng</h1>
-    <p>Chuyên lắp đặt khóa vân tay và khóa thông minh tại nhà - Uy tín &amp; Chất lượng</p>
-    <a href="tel:0902950816" class="btn-call"><i class="bi bi-telephone-fill"></i> Gọi Ngay: 0902.950.816</a>
+  <!-- Hero Section -->
+  <header class="text-center py-5 shadow-sm">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-5">Giải Pháp Khóa Thông Minh</h1>
+      <p class="lead">Chuyên lắp đặt khóa cửa vân tay, khóa điện tử tại Đà Nẵng</p>
+      <a href="#dat-hang" class="btn btn-primary btn-lg rounded-pill px-5 mt-3 shadow">Hotline: 0902.950.816</a>
+    </div>
   </header>
 
-  <section class="intro">
-    <h2>Về Chúng Tôi</h2>
-    <p>Với hơn 5 năm kinh nghiệm, chúng tôi mang đến giải pháp an toàn, tiện lợi cho ngôi nhà của bạn tại Đà Nẵng.</p>
-    <div class="features">
-      <div class="feature-item"><i class="bi bi-shield-lock-fill"></i><h5>Uy Tín</h5><p>Sản phẩm chính hãng, bảo hành dài hạn.</p></div>
-      <div class="feature-item"><i class="bi bi-person-rolodex"></i><h5>Chuyên Nghiệp</h5><p>Đội ngũ kỹ thuật viên giàu kinh nghiệm.</p></div>
-      <div class="feature-item"><i class="bi bi-headset"></i><h5>Hỗ Trợ 24/7</h5><p>Luôn sẵn sàng tư vấn và hỗ trợ.</p></div>
+  <!-- Giới thiệu -->
+  <section id="gioi-thieu">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center">Về Chúng Tôi</h2>
+      <p class="text-center">Với hơn 5 năm kinh nghiệm, chúng tôi mang đến giải pháp an toàn, tiện lợi cho ngôi nhà của bạn tại Đà Nẵng.</p>
+      <div class="row mt-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="icon-box">
+            <i class="bi bi-shield-lock-fill"></i>
+            <h5>An toàn cao</h5>
+            <p>Khóa điện tử bảo mật, giúp bảo vệ gia đình bạn an toàn mọi lúc.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <i class="bi bi-phone-fill"></i>
+            <h5>Tiện lợi</h5>
+            <p>Điều khiển và mở khóa qua app điện thoại, không cần dùng chìa khóa truyền thống.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <i class="bi bi-gear-fill"></i>
+            <h5>Dịch vụ chuyên nghiệp</h5>
+            <p>Đội ngũ kỹ thuật viên giàu kinh nghiệm, lắp đặt nhanh chóng, hiệu quả.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="products container" id="products">
-    <h2>Sản Phẩm Nổi Bật</h2>
-<!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<div class="row g-4">
-<!-- Automatic Image Resize Styles -->
-<style>
-  /* Ensure images always fill the card width and maintain aspect ratio */
-  <style>
-  .product-card .swiper-slide img,
-  .product-card .card-img-top {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-    cursor: pointer;
-  }
-
-  .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1050;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-  }
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-  }
-</style>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <img id="lightbox-img" src="" alt="">
-</div>
-
-<section class="py-5">
-  <div class="container">
+  <!-- Sản phẩm -->
+  <section id="san-pham" class="products container py-5" data-aos="fade-up">
+    <h2 class="text-center mb-4">Sản Phẩm Nổi Bật</h2>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <div class="row g-4">
-
-     <!-- Product 1 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/RvQ2tJD.jpeg" class="card-img-top" alt="Khoá Cửa Nhôm Xingfa">
+      <!-- Automatic Image Resize Styles -->
+      <style>
+        .product-card .swiper-slide img,
+        .product-card .card-img-top {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 250px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        .lightbox {
+          display: none;
+          position: fixed;
+          z-index: 1050;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0,0,0,0.8);
+          justify-content: center;
+          align-items: center;
+        }
+        .lightbox img {
+          max-width: 90%;
+          max-height: 90%;
+        }
+      </style>
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt=""></div>
+      <!-- Products -->
+      <div class="row mt-4">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <div class="swiper productSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.imgur.com/RvQ2tJD.jpeg" class="card-img-top" alt="Khoá Cửa Nhôm Xingfa"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Khoá Cửa Nhôm Xingfa</h5>
+              <p class="fw-bold text-primary text-center">Giá: 2.250.000đ</p>
+              <p>Sản phẩm cao cấp, bảo mật tối ưu.<br>
+              Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa khóa cơ, app điện thoại.<br>
+              Ruột khóa inox 304, thân khóa 3085.<br>
+              Miễn phí lắp đặt & bảo hành 24 tháng tận nhà.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <div class="swiper productSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top" alt="Khoá Kết Nối Wifi - FACEID"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Khoá Kết Nối Wifi - FACEID</h5>
+              <p class="fw-bold text-primary text-center">Giá: 3.500.000đ</p>
+              <p>Tiện lợi, dễ sử dụng, nhận diện FaceID cực nhanh.<br>
+              Kết nối wifi mở khóa và đàm thoại từ xa.<br>
+              Tích hợp 7 tính năng: FaceID, mật khẩu, vân tay, thẻ từ, chìa khóa cơ, app điện thoại, chuông cửa màn hình.<br>
+              Miễn phí lắp đặt & bảo hành 24 tháng tận nhà.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <div class="swiper productSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.imgur.com/ubAfHKX.jpeg" class="card-img-top" alt="Khóa Cổng Cửa Sắt"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Khóa Cổng Cửa Sắt</h5>
+              <p class="fw-bold text-primary text-center">Giá: 2.800.000đ</p>
+              <p>🔒 Dành cho cổng cửa sắt, an toàn tuyệt đối.<br>
+              🛡️ Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa khóa cơ, app điện thoại.<br>
+              🚚 Miễn phí lắp đặt & bảo hành 24 tháng tận nhà.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title" style="text-align: center;">Khoá Cửa Nhôm Xingfa</h5>
-      <p class="fw-bold text-primary" style="text-align: center;">Giá : 2.250.000đ</p>
-      <div style="text-align: justify;">
-        <p class="card-text">Sản phẩm cao cấp, bảo mật tối ưu.</p>
-        <p class="card-text">Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa khóa cơ, app điện thoại. Ruột khóa inox 304, thân khóa 3085.</p>
-        <p class="card-text">Miễn Phí Lắp Đặt & Bảo Hành 24 tháng tận nhà.</p>
-      </div>
-    </div>
-  </div>
-</div>
+    <!-- Swiper & Lightbox Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('.productSwiper').forEach(el => new Swiper(el, { loop: false, pagination: { el: el.querySelector('.swiper-pagination'), clickable: true }}));
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      document.querySelectorAll('.card-img-top').forEach(img => img.addEventListener('click', function(){ lightboxImg.src = this.src; lightbox.style.display = 'flex'; }));
+      lightbox.addEventListener('click', ()=> lightbox.style.display = 'none');
+    </script>
+  </section>
 
-
-
-      <!-- Product 2 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top" alt="Khoá Kết Nối Wifi - FACEID">
+  <!-- Đánh giá -->
+  <section id="danh-gia">
+    <div class="container text-center" data-aos="fade-up">
+      <h2>Khách Hàng Nói Gì?</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>"Khóa đẹp, nhân viên lắp đặt nhanh và chuyên nghiệp."</p>
+            <footer class="blockquote-footer">Anh Minh, Hải Châu</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>"Rất tiện lợi, có thể mở cửa từ xa bằng app."</p>
+            <footer class="blockquote-footer">Chị Hằng, Sơn Trà</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>"Giá tốt và bảo hành rõ ràng. Sẽ giới thiệu bạn bè!"</p>
+            <footer class="blockquote-footer">Anh Tuấn, Liên Chiểu</footer>
+          </blockquote>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title" style="text-align: center;">Khoá Kết Nối Wifi - FACEID</h5>
-      <p class="fw-bold text-primary" style="text-align: center;">Giá: 3.500.000đ</p>
-      <div style="text-align: justify;">
-        <p class="card-text">Tiện lợi, dễ sử dụng, nhận diện FaceID cực nhanh.</p>
-        <p class="card-text">Kết nối wifi mở khóa và đàm thoại từ xa.</p>
-        <p class="card-text">Tích hợp 7 tính năng: FaceID, mật khẩu, vân tay, thẻ từ, chìa khóa cơ, App điện thoại, Chuông cửa màn hình.</p>
-        <p class="card-text">Miễn Phí Lắp Đặt & Bảo Hành 24 tháng tận nhà.</p>
-      </div>
+  </section>
+
+  <!-- Đặt Hàng Nhanh -->
+  <section id="dat-hang">
+    <div class="container text-center" data-aos="fade-up">
+      <h2>Đặt Hàng Nhanh</h2>
+      <form class="row g-2 justify-content-center">
+        <div class="col-auto">
+          <input type="text" class="form-control form-control-sm" placeholder="Họ và tên" required>
+        </div>
+        <div class="col-auto">
+          <input type="tel" class="form-control form-control-sm" placeholder="Số điện thoại" required>
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control form-control-sm" placeholder="Địa chỉ" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" formaction="https://zalo.me/0902950816" formmethod="get" class="btn btn-success btn-sm">Gửi qua Zalo</button>
+        </div>
+      </form>
     </div>
-  </div>
-</div>
+  </section>
 
-
-      <!-- Product 3 -->
-<div class="col-md-4">
-  <div class="card product-card">
-    <div class="swiper productSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/ubAfHKX.jpeg" class="card-img-top" alt="Khóa Cổng Cửa Sắt">
+  <!-- Liên hệ & Bản đồ -->
+  <section id="lien-he" class="bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-4">Liên Hệ</h2>
+      <div class="row align-items-start">
+        <div class="col-lg-5 mb-4">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i><strong>Địa chỉ:</strong><br>223 Trường Chinh, TP. Đà Nẵng</p>
+            <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i><strong>Hotline:</strong><br><a href="tel:0902950816" class="text-decoration-none">0902.950.816</a></p>
+            <p class="mb-0"><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong><br><a href="mailto:similockdn@gmail.com" class="text-decoration-none">similockdn@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="ratio ratio-4x3 shadow-sm rounded">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.079220016096!2d108.21643341534594!3d16.067839388959617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219acb764d047%3A0x7592f1436d585f36!2zMjIzIFRydXnDqW5oLCBQaC4gRGEsIFRow6FpIFNoaW5oLCBUUC4gQ8O0YSBEw7KnZywgVMOibiDhu6lj!5e0!3m2!1svi!2s!4v1681151178580!5m2!1svi!2s" allowfullscreen loading="lazy"></iframe>
+          </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title" style="text-align: center;">Khóa Cổng Cửa Sắt</h5>
-      <p class="fw-bold text-primary" style="text-align: center;">Giá: 2.800.000đ</p>
-      <div style="text-align: justify;">
-        <p class="card-text">🔒 Dành cho cổng cửa sắt, an toàn tuyệt đối.</p>
-        <p class="card-text">🛡️ Tích hợp 5 tính năng: mật khẩu, vân tay, thẻ từ, chìa cơ, app điện thoại.</p>
-        <p class="card-text">🚚 Miễn Phí Lắp Đặt & Bảo Hành 24 tháng tận nhà.</p>
-      </div>
-    </div>
-  </div>
-</div>
+  </section>
 
-    </div>
-  </div>
-</section>
-
-<!-- Swiper và Lightbox Script -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  // Khởi tạo Swiper cho tất cả productSwiper
-  var swipers = document.querySelectorAll('.productSwiper');
-  swipers.forEach(function (el) {
-    new Swiper(el, {
-      loop: false,
-      pagination: {
-        el: el.querySelector('.swiper-pagination'),
-        clickable: true,
-      },
-    });
-  });
-
-  // Lightbox khi click ảnh
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-
-  document.querySelectorAll('.card-img-top').forEach(img => {
-    img.addEventListener('click', function () {
-      lightboxImg.src = this.src;
-      lightbox.style.display = 'flex';
-    });
-  });
-
-  lightbox.addEventListener('click', function () {
-    lightbox.style.display = 'none';
-  });
-</script>
-
-
-  <section class="testimonial-section" id="testimonials">
-    <h2>Khách Hàng Nói Gì?</h2>
+  <!-- Footer -->
+  <footer class="text-center py-4" style="background: linear-gradient(135deg, #0d6efd, #6610f2); color: #fff;">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4"><div class="testimonial-item"><p>"Sản phẩm chính hãng, lắp đặt nhanh chóng!"</p><div class="author">- Anh Hưng - Hải Châu</div></div></div>
-        <div class="col-md-4"><div class="testimonial-item"><p>"Dịch vụ tận tình, giá cả hợp lý."</p><div class="author">- Chị Mai - Sơn Trà</div></div></div>
-        <div class="col-md-4"><div class="testimonial-item"><p>"Sẽ giới thiệu cho bạn bè!"</p><div class="author">- Anh Tuấn - Chung cư Bàu Tràm</div></div></div>
+      <p class="mb-2">© 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://m.me/khoadientudanangvn" target="_blank" class="btn btn-info btn-sm mx-2" title="Messenger">
+          <i class="bi bi-facebook me-1"></i>Messenger
+        </a>
+        <a href="https://zalo.me/0902950816" target="_blank" class="btn btn-success btn-sm mx-2" title="Zalo">
+          <i class="bi bi-chat-dots me-1"></i>Zalo
+        </a>
       </div>
-    </div>
-  </section>
-
-  <section class="contact-section container" id="contact">
-    <h2 class="text-center text-primary mb-4">Liên Hệ Với Chúng Tôi</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-4 text-center">
-        <h4><strong>Hotline</strong></h4>
-        <p class="fw-bold" style="font-size: 1.5rem; color: #1976d2;">0902.950.816</p>
-        <a href="tel:0902950816" class="btn btn-outline-primary" style="border-radius: 50px; padding: 10px 30px;">Gọi Ngay</a>
-      </div>
-      <div class="col-md-4 text-center mt-4 mt-md-0">
-        <h4><strong>Địa chỉ</strong></h4>
-        <p style="font-size:1.2rem;">223 Trường Chinh, TP. Đà Nẵng</p>
-      </div>
-    </div>
-
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6 text-center">
-        <h5 class="mb-3">Kết nối với chúng tôi qua mạng xã hội</h5>
-        <div class="contact-links">
-          <a href="https://zalo.me/0902950816" target="_blank"><i class="bi bi-chat-dots-fill"></i></a>
-          <!-- Nút Kết nối qua Facebook với Icon -->
-<a href="https://m.me/khoadientudanangvn" target="_blank"
-   style="display:block; margin-top:8px; text-align:center; background-color:#4267B2; color:#fff; padding:6px; border-radius:8px; text-decoration:none; font-weight:bold;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width:12px; vertical-align:middle; margin-right:8px;">
-  Kết nối qua Facebook
-</a>
-
-         <div style="max-width: 400px; margin: auto; padding: 24px; border-radius: 10px; background: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
-  <h3 style="text-align:center; color:#333;">🛒 Đặt Hàng Nhanh</h3>
-  
-  <label style="display:block; margin-top:15px; color:#333;">Họ tên*</label>
-  <input type="text" placeholder="Nhập họ tên" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
-
-  <label style="display:block; margin-top:15px; color:#333;">Số điện thoại*</label>
-  <input type="tel" placeholder="Nhập số điện thoại" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
-
-  <label style="display:block; margin-top:15px; color:#333;">Địa chỉ lắp đặt</label>
-  <input type="text" placeholder="VD: 123 Lê Lợi, Đà Nẵng" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
-
-  <label style="display:block; margin-top:15px; color:#333;">Chọn mẫu khóa</label>
-  <select style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
-    <option>SF90</option>
-    <option>SF86</option>
-    <option>SF80</option>
-    <option>Khác</option>
-  </select>
-
-  <a href="https://zalo.me/0902950816?text=Chào%20bạn%2C%20tôi%20muốn%20đặt%20khóa%20điện%20tử" target="_blank"
-     style="display:block; margin-top:15px; text-align:center; background-color:#0084ff; color:#fff; padding:10px; border-radius:10px; text-decoration:none; font-weight:bold;">
-    📩 Đặt hàng qua Zalo
-  </a>
-</div>
-
-
-        <div class="map mt-4">
-          <iframe width="100%" height="200" src="https://maps.google.com/maps?q=Da+Nang,+Vietnam&z=14&output=embed" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="#intro">Giới Thiệu</a>
-      <a href="#products">Sản Phẩm</a>
-      <a href="#testimonials">Đánh Giá</a>
-      <a href="#contact">Liên Hệ</a>
-    </div>
-    <div class="social-icons">
-      <a href="https://zalo.me/0902950816" target="_blank"><i class="bi bi-chat-dots-fill"></i></a>
-      <a href="https://www.youtube.com/channel/@Khoathongminhdanang" target="_blank"><i class="bi bi-youtube"></i></a>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
+
 </html>
