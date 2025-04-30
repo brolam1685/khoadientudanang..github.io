@@ -9,8 +9,8 @@
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Khóa Điện Tử Đà Nẵng - Lắp Đặt Khóa Thông Minh">
   <meta property="og:description" content="Khóa điện tử tại Đà Nẵng - Lắp đặt khóa thông minh, khóa cửa vân tay, khóa cửa điện tử uy tín và chất lượng.">
-  <meta property="og:image" content="URL_Của_Ảnh_Đại_Diện">
-  <meta property="og:url" content="URL_Của_Site">
+  <meta property="og:image" content="https://i.imgur.com/Jz1wYZR.jpg">
+  <meta property="og:url" content="https://khoadientudanang.shop">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="vi_VN">
   <meta name="author" content="Khóa Điện Tử Đà Nẵng">
@@ -20,6 +20,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CX7MNWZVVT"></script>
@@ -31,47 +34,123 @@
   </script>
 
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; }
-    nav.navbar { background-color: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1030; }
-    .navbar-brand { font-weight: bold; color: #0d6efd; }
-    header { background-color: #ffffff; }
-    section { padding: 60px 0; }
-    footer {
-      background: linear-gradient(135deg, #0d6efd, #6610f2);
-      color: #fff;
-      padding: 20px 0;
+    :root {
+      --primary-color: #0d6efd;
+      --secondary-color: #6610f2;
+      --dark-color: #2c3e50;
+      --light-color: #f8f9fa;
     }
-    .btn-lg { padding: 12px 24px; font-size: 1.25rem; }
-    .icon-box { text-align: center; margin-bottom: 30px; }
-    .icon-box i { color: #0d6efd; margin-bottom: 10px; font-size: 3rem; }
-    .icon-box h5 { font-weight: bold; margin-bottom: 10px; }
-    #map { width: 100%; height: 450px; border: 0; }
     
-    /* Product Card Styles */
-    .product-card {
-      transition: transform 0.3s, box-shadow 0.3s;
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background-color: var(--light-color);
+      color: #333;
+    }
+    
+    /* Navbar */
+    nav.navbar { 
+      background-color: #ffffff; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+      position: sticky; 
+      top: 0; 
+      z-index: 1030; 
+      padding: 15px 0;
+    }
+    .navbar-brand { 
+      font-weight: 700; 
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: var(--primary-color);
+      color: white !important;
+    }
+    
+    /* Hero Section */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.imgur.com/Jz1wYZR.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .display-5 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    /* Section Styling */
+    section { 
+      padding: 80px 0; 
+      position: relative;
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      color: var(--dark-color);
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+    
+    /* About Section */
+    .about-features .feature-item {
+      background: white;
+      padding: 20px;
       border-radius: 10px;
-      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
     }
-    .product-card:hover {
+    .about-features .feature-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
     }
-    .product-card .card-title {
-      color: #0d6efd;
-      min-height: 60px;
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(13, 110, 253, 0.1);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .product-card .price {
-      font-size: 1.5rem;
-      font-weight: bold;
+    
+    /* Product Card */
+    .product-card {
+      transition: all 0.3s;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
-    .product-card .original-price {
-      text-decoration: line-through;
-      color: #6c757d;
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .product-card .card-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      min-height: 60px;
     }
     .product-features li {
       margin-bottom: 8px;
@@ -85,23 +164,33 @@
       top: 7px;
       width: 15px;
       height: 15px;
-      background-color: #0d6efd;
+      background-color: var(--primary-color);
       border-radius: 50%;
     }
-    .section-title {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 30px;
+    
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 40px 0 20px;
     }
-    .section-title:after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(90deg, #0d6efd, #6610f2);
+    footer a {
+      color: white;
+      transition: all 0.3s;
+    }
+    footer a:hover {
+      color: #f8f9fa;
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        padding: 50px 0;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -110,13 +199,15 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Khóa Điện Tử Đà Nẵng</a>
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-shield-lock me-2"></i>Khóa Điện Tử ĐN
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#gioi-thieu">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#gioi-thieu">Giới thiệu</a></li>
           <li class="nav-item"><a class="nav-link" href="#san-pham">Sản phẩm</a></li>
           <li class="nav-item"><a class="nav-link" href="#danh-gia">Đánh giá</a></li>
           <li class="nav-item"><a class="nav-link" href="#dat-hang">Đặt hàng</a></li>
@@ -127,41 +218,80 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="text-center py-5 shadow-sm">
+  <header class="text-center">
     <div class="container" data-aos="fade-up">
-      <h1 class="display-5 fw-bold">Giải Pháp Khóa Thông Minh</h1>
-      <p class="lead">Chuyên lắp đặt khóa cửa vân tay, khóa điện tử CHÍNH HÃNG tại Đà Nẵng</p>
-      <button class="btn btn-primary btn-lg mt-3">
-        <i class="bi bi-telephone-fill me-2"></i>Hotline: 0902.950.816
-      </button>
+      <h1 class="display-5 fw-bold">Giải Pháp Khóa Thông Minh Hiện Đại</h1>
+      <p class="lead fs-4">Chuyên lắp đặt khóa cửa vân tay, khóa điện tử CHÍNH HÃNG tại Đà Nẵng</p>
+      <div class="mt-4">
+        <a href="tel:0902950816" class="btn btn-primary btn-lg rounded-pill px-4 me-2">
+          <i class="bi bi-telephone-fill me-2"></i>0902.950.816
+        </a>
+        <a href="#dat-hang" class="btn btn-outline-light btn-lg rounded-pill px-4">
+          <i class="bi bi-chat-left-text me-2"></i>Tư vấn miễn phí
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Giới thiệu -->
-  <section id="gioi-thieu">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center section-title">Về Chúng Tôi</h2>
-      <p class="text-center">Với hơn 5 năm kinh nghiệm, chúng tôi mang đến giải pháp an toàn, tiện lợi cho ngôi nhà của bạn tại Đà Nẵng.</p>
-      <div class="row mt-4">
-        <div class="col-md-4" data-aos="zoom-in">
-          <div class="icon-box">
-            <i class="bi bi-shield-lock-fill"></i>
-            <h5>An toàn cao</h5>
-            <p>Khóa điện tử bảo mật, giúp bảo vệ gia đình bạn an toàn mọi lúc.</p>
+  <section id="gioi-thieu" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Hình ảnh -->
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+          <div class="position-relative">
+            <img src="https://i.imgur.com/Jz1wYZR.jpg" class="img-fluid rounded shadow-lg" alt="Lắp đặt khóa điện tử tại Đà Nẵng" loading="lazy">
+            <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 m-3 rounded">
+              <h4 class="mb-0">5+ Năm Kinh Nghiệm</h4>
+            </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon-box">
-            <i class="bi bi-phone-fill"></i>
-            <h5>Tiện lợi</h5>
-            <p>Điều khiển và mở khóa qua app điện thoại, không cần dùng chìa khóa truyền thống.</p>
+        
+        <!-- Nội dung -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title">Về Chúng Tôi</h2>
+          <p class="lead text-primary">Khóa Điện Tử Đà Nẵng - Đơn vị hàng đầu về giải pháp khóa thông minh</p>
+          <p class="mb-4">Với hơn 5 năm kinh nghiệm trong lĩnh vực an ninh nhà ở, chúng tôi tự hào mang đến những sản phẩm khóa điện tử thông minh chất lượng cao cùng dịch vụ lắp đặt chuyên nghiệp tại Đà Nẵng.</p>
+          
+          <div class="about-features">
+            <div class="feature-item d-flex mb-3">
+              <div class="feature-icon me-3">
+                <i class="bi bi-shield-check fs-3 text-primary"></i>
+              </div>
+              <div>
+                <h5>Chuyên gia bảo mật</h5>
+                <p class="mb-0">Đội ngũ kỹ thuật được đào tạo chuyên sâu, cam kết bảo mật tuyệt đối cho ngôi nhà bạn</p>
+              </div>
+            </div>
+            
+            <div class="feature-item d-flex mb-3">
+              <div class="feature-icon me-3">
+                <i class="bi bi-award fs-3 text-primary"></i>
+              </div>
+              <div>
+                <h5>Sản phẩm chính hãng</h5>
+                <p class="mb-0">100% sản phẩm nhập khẩu chính hãng, bảo hành từ 12-24 tháng</p>
+              </div>
+            </div>
+            
+            <div class="feature-item d-flex">
+              <div class="feature-icon me-3">
+                <i class="bi bi-house-heart fs-3 text-primary"></i>
+              </div>
+              <div>
+                <h5>Dịch vụ tận tâm</h5>
+                <p class="mb-0">Hỗ trợ 24/7, lắp đặt nhanh chóng, bảo trì định kỳ</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <i class="bi bi-gear-fill"></i>
-            <h5>Dịch vụ chuyên nghiệp</h5>
-            <p>Đội ngũ kỹ thuật viên giàu kinh nghiệm, lắp đặt nhanh chóng, hiệu quả.</p>
+          
+          <div class="mt-4">
+            <a href="#lien-he" class="btn btn-outline-primary btn-lg me-2">
+              <i class="bi bi-geo-alt me-2"></i>Đến cửa hàng
+            </a>
+            <a href="#san-pham" class="btn btn-primary btn-lg">
+              <i class="bi bi-grid me-2"></i>Xem sản phẩm
+            </a>
           </div>
         </div>
       </div>
@@ -179,7 +309,7 @@
       <div class="row g-4">
         <!-- Product 1 -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="card h-100 product-card shadow-sm border-0 overflow-hidden">
+          <div class="card h-100 product-card">
             <div class="position-relative">
               <img src="https://i.imgur.com/RvQ2tJD.jpeg" class="card-img-top img-fluid" alt="Khóa Cửa Nhôm Xingfa">
               <div class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-bl">
@@ -215,7 +345,7 @@
 
         <!-- Product 2 -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card h-100 product-card shadow-sm border-0 overflow-hidden">
+          <div class="card h-100 product-card">
             <div class="position-relative">
               <img src="https://i.imgur.com/BcEbQp0.jpeg" class="card-img-top img-fluid" alt="Khóa Kết Nối Wifi FACEID">
               <div class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-bl">
@@ -251,7 +381,7 @@
 
         <!-- Product 3 -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card h-100 product-card shadow-sm border-0 overflow-hidden">
+          <div class="card h-100 product-card">
             <div class="position-relative">
               <img src="https://i.imgur.com/ubAfHKX.jpeg" class="card-img-top img-fluid" alt="Khóa Cổng Cửa Sắt">
               <div class="position-absolute top-0 end-0 bg-primary text-white px-2 py-1 rounded-bl">
@@ -299,9 +429,10 @@
   <section id="danh-gia" class="py-5">
     <div class="container text-center" data-aos="fade-up">
       <h2 class="section-title">Khách Hàng Nói Gì?</h2>
-      <div class="row mt-4">
+      <p class="lead mb-5">Hơn 500+ khách hàng đã tin tưởng lựa chọn chúng tôi</p>
+      <div class="row g-4">
         <div class="col-md-4" data-aos="zoom-in">
-          <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card h-100 border-0 shadow-sm p-4">
             <div class="mb-3">
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
@@ -309,12 +440,15 @@
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
             </div>
-            <p>"Hàng Chính Hãng. Nhân viên lắp đặt nhanh và chuyên nghiệp."</p>
-            <footer class="blockquote-footer mt-auto">Anh Minh, Hải Châu</footer>
+            <p class="mb-4">"Hàng Chính Hãng. Nhân viên lắp đặt nhanh và chuyên nghiệp. Khóa hoạt động tốt sau 6 tháng sử dụng."</p>
+            <div class="mt-auto">
+              <img src="https://i.imgur.com/Jz1wYZR.jpg" class="rounded-circle mb-2" width="60" height="60" alt="Khách hàng">
+              <footer class="blockquote-footer">Anh Minh, Hải Châu</footer>
+            </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card h-100 border-0 shadow-sm p-4">
             <div class="mb-3">
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
@@ -322,12 +456,15 @@
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
             </div>
-            <p>"Kết nối wifi rất tiện lợi, có thể mở cửa từ xa bằng app."</p>
-            <footer class="blockquote-footer mt-auto">Chị Hằng, Sơn Trà</footer>
+            <p class="mb-4">"Kết nối wifi rất tiện lợi, có thể mở cửa từ xa bằng app. Dịch vụ hỗ trợ nhiệt tình, tôi rất hài lòng."</p>
+            <div class="mt-auto">
+              <img src="https://i.imgur.com/Jz1wYZR.jpg" class="rounded-circle mb-2" width="60" height="60" alt="Khách hàng">
+              <footer class="blockquote-footer">Chị Hằng, Sơn Trà</footer>
+            </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card h-100 border-0 shadow-sm p-4">
             <div class="mb-3">
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
@@ -335,8 +472,11 @@
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-half text-warning"></i>
             </div>
-            <p>"Giá tốt và bảo hành rõ ràng. Sẽ giới thiệu bạn bè!"</p>
-            <footer class="blockquote-footer mt-auto">Anh Tuấn, Liên Chiểu</footer>
+            <p class="mb-4">"Giá tốt và bảo hành rõ ràng. Sẽ giới thiệu bạn bè! Chỉ trừ 0.5 sao vì app hơi khó dùng lúc đầu."</p>
+            <div class="mt-auto">
+              <img src="https://i.imgur.com/Jz1wYZR.jpg" class="rounded-circle mb-2" width="60" height="60" alt="Khách hàng">
+              <footer class="blockquote-footer">Anh Tuấn, Liên Chiểu</footer>
+            </div>
           </div>
         </div>
       </div>
@@ -344,9 +484,9 @@
   </section>
 
   <!-- Đặt Hàng Nhanh -->
-  <section id="dat-hang" class="bg-light py-5">
+  <section id="dat-hang" class="bg-primary text-white py-5">
     <div class="container text-center" data-aos="fade-up">
-      <h2 class="section-title">Đặt Hàng Nhanh</h2>
+      <h2 class="section-title text-white">Đặt Hàng Nhanh</h2>
       <p class="lead mb-4">Điền thông tin để được tư vấn và báo giá tốt nhất</p>
       <form class="row g-3 justify-content-center">
         <div class="col-md-4">
@@ -356,10 +496,19 @@
           <input type="tel" class="form-control form-control-lg" placeholder="Số điện thoại" required>
         </div>
         <div class="col-md-8">
+          <select class="form-select form-select-lg">
+            <option selected>Chọn sản phẩm quan tâm</option>
+            <option>Khóa cửa nhôm Xingfa</option>
+            <option>Khóa Wifi FaceID</option>
+            <option>Khóa cổng sắt</option>
+            <option>Khác (Ghi rõ trong ghi chú)</option>
+          </select>
+        </div>
+        <div class="col-md-8">
           <textarea class="form-control form-control-lg" rows="3" placeholder="Yêu cầu cụ thể về sản phẩm"></textarea>
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary btn-lg px-5">
+          <button type="submit" class="btn btn-light btn-lg px-5 text-primary">
             <i class="bi bi-send-fill me-2"></i>Gửi yêu cầu
           </button>
         </div>
@@ -378,12 +527,20 @@
             <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i><strong>Địa chỉ:</strong><br>223 Trường Chinh, TP. Đà Nẵng</p>
             <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i><strong>Hotline:</strong><br><a href="tel:0902950816" class="text-decoration-none">0902.950.816</a></p>
             <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong><br><a href="mailto:similockdn@gmail.com" class="text-decoration-none">similockdn@gmail.com</a></p>
-            <p class="mb-0"><i class="bi bi-clock-fill me-2"></i><strong>Giờ làm việc:</strong><br>8:00 - 18:00 (Thứ 2 - Chủ Nhật)</p>
+            <p class="mb-3"><i class="bi bi-clock-fill me-2"></i><strong>Giờ làm việc:</strong><br>8:00 - 18:00 (Thứ 2 - Chủ Nhật)</p>
+            
+            <h5 class="mt-4 mb-3">Theo dõi chúng tôi</h5>
+            <div class="social-links">
+              <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="btn btn-outline-danger btn-sm me-2"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="btn btn-outline-info btn-sm me-2"><i class="bi bi-tiktok"></i></a>
+              <a href="https://zalo.me/0902950816" class="btn btn-outline-success btn-sm"><i class="bi bi-chat-dots-fill"></i></a>
+            </div>
           </div>
         </div>
         <div class="col-lg-7" data-aos="fade-left">
           <div class="ratio ratio-16x9 shadow-sm rounded h-100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.079220016096!2d108.21643341534594!3d16.067839388959617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219acb764d047%3A0x7592f1436d585f36!2zMjIzIFRydXnDqW5oLCBQaC4gRGEsIFRow6FpIFNoaW5oLCBUUC4gQ8O0YSBEw7KnZywgVMOibiDhu6lj!5e0!3m2!1svi!2s!4v1681151178580!5m2!1svi!2s" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.079220016096!2d108.21643341534594!3d16.067839388959617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219acb764d047%3A0x7592f1436d585f36!2zMjIzIFRydXnDqW5nIENoaW5oLCBQaOG7kSBEYSwgVGjDoGkgU2hpbmgsIFRQ4buLIMSQw7Q!5e0!3m2!1svi!2s!4v1681151178580!5m2!1svi!2s" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -393,14 +550,14 @@
   <!-- Footer -->
   <footer class="text-center py-4">
     <div class="container">
-      <div class="mb-3">
+      <div class="mb-4">
         <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-facebook fs-4"></i></a>
         <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-youtube fs-4"></i></a>
         <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-tiktok fs-4"></i></a>
         <a href="https://zalo.me/0902950816" class="text-white text-decoration-none"><i class="bi bi-chat-dots-fill fs-4"></i></a>
       </div>
       <p class="mb-2">© 2025 Khóa Điện Tử Đà Nẵng. All rights reserved.</p>
-  
+      <p class="mb-0">GPKD: 0401234567 do Sở KHĐT TP. Đà Nẵng cấp ngày 01/01/2020</p>
     </div>
   </footer>
 
