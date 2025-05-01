@@ -824,7 +824,7 @@
         </div>
         <div class="col-lg-7" data-aos="fade-left">
           <div class="ratio ratio-16x9 shadow-sm rounded h-100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.079220016096!2d108.21643341534594!3d16.067839388959617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219acb764d047%3A0x7592f1436d585f36!2zMjIzIFRydXnDqW5nIENoaW5oLCBQaOG7kSBEYSwgVGjDoGkgU2hpbmgsIFRQ4buLIMSQw7Q!5e0!3m2!1svi!2s!4v1681151178580!5m2!1svi!2s" allowfullscreen="" loading="lazy" title="Bản đồ cửa hàng Khóa Điện Tử Đà Nẵng"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.079220016096!2d108.21643341534594!3d16.067839388959617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219acb764d047%3A0x7592f1436d585f36!2s223%20Tr%C6%B0%C6%A1ng%20Chinh%2C%20Ph%C6%B0%E1%BB%9Bc%20D%E1%BB%B1%2C%20Thanh%20Kh%C3%AA%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng%20550000!5e0!3m2!1svi!2s!4v1681151178580!5m2!1svi!2s" allowfullscreen="" loading="lazy" title="Bản đồ cửa hàng Khóa Điện Tử Đà Nẵng"></iframe>
           </div>
         </div>
       </div>
@@ -1000,8 +1000,16 @@
 
     // Xử lý click vào tên sản phẩm
     document.addEventListener('DOMContentLoaded', function() {
+      // Khởi tạo modal
+      const productModal = new bootstrap.Modal(document.getElementById('productDetailModal'));
+      
       document.querySelectorAll('.product-title').forEach(title => {
-        title.addEventListener('click', function() {
+        title.addEventListener('click', function(e) {
+          // Ngăn chặn hành vi mặc định của thẻ a
+          if (e.target.tagName === 'A') {
+            e.preventDefault();
+          }
+          
           const productId = parseInt(this.getAttribute('data-product-id'));
           const product = products.find(p => p.id === productId);
           
@@ -1036,10 +1044,17 @@
             });
             
             // Hiển thị modal
-            const modal = new bootstrap.Modal(document.getElementById('productDetailModal'));
-            modal.show();
+            productModal.show();
           }
         });
+      });
+      
+      // Xử lý sự kiện đóng modal
+      document.getElementById('productDetailModal').addEventListener('hidden.bs.modal', function () {
+        // Reset modal khi đóng
+        document.getElementById('productDetailModalLabel').textContent = '';
+        document.getElementById('productDetailImages').innerHTML = '';
+        document.getElementById('productDetailFeatures').innerHTML = '';
       });
     });
   </script>
