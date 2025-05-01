@@ -339,49 +339,30 @@
       opacity: 1;
       visibility: visible;
     }
-    
-    /* Responsive */
-    @media (max-width: 992px) {
-      header {
-        padding: 80px 0;
-      }
-      
-      .display-5 {
-        font-size: 2.5rem;
-      }
+
+    /* Thêm vào phần CSS */
+    .product-title {
+      cursor: pointer;
+      transition: color 0.3s;
     }
-    
-    @media (max-width: 768px) {
-      section {
-        padding: 60px 0;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      header {
-        padding: 60px 0;
-      }
-      
-      .display-5 {
-        font-size: 2rem;
-      }
+    .product-title:hover {
+      color: #0a58ca !important;
+      text-decoration: underline;
     }
-    
-    @media (max-width: 576px) {
-      section {
-        padding: 50px 0;
-      }
-      
-      .section-title {
-        font-size: 1.6rem;
-      }
-      
-      .btn-lg {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
+    #productDetailFeatures li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    #productDetailFeatures li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 15px;
+      height: 15px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -511,7 +492,7 @@
               </div>
             </div>
             <div class="card-body">
-              <h3 class="card-title fw-bold text-center">KHÓA CỬA NHÔM XINGFA SIMILOCK</h3>
+              <h3 class="card-title fw-bold text-center product-title">KHÓA CỬA NHÔM XINGFA SIMILOCK</h3>
               <div class="text-center mb-3">
                 <span class="text-danger fw-bold fs-4">2.250.000đ</span>
                 <del class="text-muted ms-2">2.800.000đ</del>
@@ -548,7 +529,7 @@
               </div>
             </div>
             <div class="card-body">
-              <h3 class="card-title fw-bold text-center">KHÓA WIFI FACEID SIMILOCK</h3>
+              <h3 class="card-title fw-bold text-center product-title">KHÓA WIFI FACEID SIMILOCK</h3>
               <div class="text-center mb-3">
                 <span class="text-danger fw-bold fs-4">3.500.000đ</span>
                 <del class="text-muted ms-2">4.200.000đ</del>
@@ -585,7 +566,7 @@
               </div>
             </div>
             <div class="card-body">
-              <h3 class="card-title fw-bold text-center">KHÓA CỔNG SẮT SIMILOCK</h3>
+              <h3 class="card-title fw-bold text-center product-title">KHÓA CỔNG SẮT SIMILOCK</h3>
               <div class="text-center mb-3">
                 <span class="text-danger fw-bold fs-4">2.800.000đ</span>
                 <del class="text-muted ms-2">3.300.000đ</del>
@@ -866,6 +847,44 @@
   <!-- Back to top button -->
   <a href="#" class="back-to-top" aria-label="Lên đầu trang"><i class="bi bi-arrow-up"></i></a>
 
+  <!-- Modal chi tiết sản phẩm -->
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fw-bold" id="productDetailModalLabel"></h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img id="productDetailImage" src="" class="img-fluid rounded" alt="" loading="lazy">
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <span id="productDetailPrice" class="text-danger fw-bold fs-4"></span>
+                  <del id="productDetailOldPrice" class="text-muted ms-2"></del>
+                </div>
+                <span id="productDetailBadge" class="badge bg-danger fs-6"></span>
+              </div>
+              <ul id="productDetailFeatures" class="list-unstyled"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <a href="tel:0902950816" class="btn btn-primary">
+            <i class="bi bi-telephone-fill me-2"></i>Gọi ngay
+          </a>
+          <a href="https://zalo.me/0902950816" class="btn btn-success">
+            <i class="bi bi-chat-dots-fill me-2"></i>Zalo ngay
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -908,6 +927,47 @@
         this.reset();
       });
     }
+
+    // Xử lý click vào tên sản phẩm
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.product-card .card-title').forEach(title => {
+        title.classList.add('product-title');
+        title.addEventListener('click', function() {
+          const card = this.closest('.product-card');
+          const modal = new bootstrap.Modal(document.getElementById('productDetailModal'));
+          
+          // Đặt thông tin vào modal
+          document.getElementById('productDetailModalLabel').textContent = this.textContent;
+          document.getElementById('productDetailImage').src = card.querySelector('img').src;
+          document.getElementById('productDetailImage').alt = this.textContent;
+          
+          const priceElement = card.querySelector('.text-danger');
+          const oldPriceElement = card.querySelector('del');
+          document.getElementById('productDetailPrice').textContent = priceElement.textContent;
+          document.getElementById('productDetailOldPrice').textContent = oldPriceElement ? oldPriceElement.textContent : '';
+          
+          const badgeElement = card.querySelector('.product-badge');
+          if (badgeElement) {
+            document.getElementById('productDetailBadge').textContent = badgeElement.textContent;
+            document.getElementById('productDetailBadge').className = 'badge ' + badgeElement.className.replace('product-badge', '') + ' fs-6';
+          } else {
+            document.getElementById('productDetailBadge').textContent = '';
+          }
+          
+          // Copy các tính năng
+          const featuresList = document.getElementById('productDetailFeatures');
+          featuresList.innerHTML = '';
+          card.querySelectorAll('.product-features li').forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item.textContent;
+            featuresList.appendChild(li);
+          });
+          
+          // Hiển thị modal
+          modal.show();
+        });
+      });
+    });
   </script>
 </body>
 </html>
