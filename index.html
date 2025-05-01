@@ -409,12 +409,123 @@
         <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
           <di<div class="position-relative">
   <img src="https://i.imgur.com/Jz1wYZR.jpg" class="img-fluid rounded shadow" alt="Giới thiệu khóa điện tử" loading="lazy">
-  <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 m-3 rounded">
+  <div class="intro-container">
+  <img src="https://i.imgur.com/Jz1wYZR.jpg" 
+       class="intro-image" 
+       alt="Giới thiệu khóa điện tử" 
+       loading="lazy">
+  
+  <div class="experience-badge">
     <h4 class="mb-0">5+ Năm Kinh Nghiệm</h4>
     <h4 class="mb-0"><i class="bi bi-patch-check-fill me-2"></i>HÀNG CHÍNH HÃNG SIMILOCK</h4>
   </div>
-  <div class="position-absolute top-0 end-0 bg-danger text-white p-3 m-3 rounded">
+  
+  <div class="support-badge">
     <h5 class="mb-0"><i class="bi bi-headset me-2"></i>Hỗ trợ 24/7</h5>
+  </div>
+</div>
+
+<style>
+  /* Main container */
+  .intro-container {
+    position: relative;
+    min-height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+  }
+  
+  /* Image styling */
+  .intro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Experience badge */
+  .experience-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: rgba(13, 110, 253, 0.9);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    z-index: 2;
+    max-width: 80%;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  /* Support badge */
+  .support-badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: rgba(220, 53, 69, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  /* Icon styling */
+  .bi-patch-check-fill {
+    color: #ffc107;
+    font-size: 1.2em;
+  }
+  
+  .bi-headset {
+    font-size: 1.1em;
+  }
+  
+  /* Hover effects */
+  .intro-container:hover .intro-image {
+    transform: scale(1.03);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .intro-container {
+      min-height: 300px;
+    }
+    
+    .experience-badge,
+    .support-badge {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+    
+    .experience-badge {
+      bottom: 15px;
+      left: 15px;
+      max-width: 85%;
+    }
+    
+    .support-badge {
+      top: 15px;
+      right: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intro-container {
+      min-height: 250px;
+    }
+    
+    .experience-badge h4,
+    .support-badge h5 {
+      font-size: 0.8rem;
+    }
+  }
+</style>
   </div>
 </div>
         </div>
