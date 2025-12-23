@@ -1,210 +1,216 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Khóa Điện Tử Đà Nẵng | Khóa Vân Tay SIMILOCK Chính Hãng</title>
+<title>Khóa Điện Tử Đà Nẵng | SIMILOCK Chính Hãng</title>
 
-  <!-- SEO Meta -->
-  <meta name="description" content="SIMILOCK Đà Nẵng chuyên khóa vân tay, khóa cửa điện tử, FaceID. Miễn phí lắp đặt và bảo hành 24 tháng tận nhà. Hotline 0902 950 816." />
-  <meta name="keywords" content="khóa điện tử Đà Nẵng, khóa vân tay Đà Nẵng, khóa thông minh SIMILOCK, khóa cửa FaceID, khóa cửa nhôm xingfa" />
-  <meta name="author" content="SIMILOCK Đà Nẵng" />
+<meta name="description" content="SIMILOCK Đà Nẵng chuyên khóa vân tay, khóa cửa điện tử, FaceID. Miễn phí lắp đặt và bảo hành 24 tháng tận nhà. Hotline 0902 950 816">
+<meta name="keywords" content="khóa điện tử đà nẵng, khóa vân tay đà nẵng, similock đà nẵng">
+<meta name="author" content="SIMILOCK Đà Nẵng">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Khóa Điện Tử Đà Nẵng - SIMILOCK Chính Hãng" />
-  <meta property="og:description" content="Lắp đặt khóa vân tay – khóa cửa điện tử SIMILOCK tại Đà Nẵng. Miễn phí lắp đặt & bảo hành 24 tháng tận nhà." />
-  <meta property="og:image" content="https://i.imgur.com/RvQ2tJD.jpeg" />
-  <meta property="og:type" content="website" />
+<!-- Open Graph -->
+<meta property="og:title" content="SIMILOCK Đà Nẵng – Khóa Điện Tử Chính Hãng">
+<meta property="og:image" content="https://i.imgur.com/RvQ2tJD.jpeg">
+<meta property="og:type" content="website">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "SIMILOCK Đà Nẵng - Khóa Điện Tử & Khóa Vân Tay",
-    "image": "https://i.imgur.com/RvQ2tJD.jpeg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "223 Trường Chinh",
-      "addressLocality": "Đà Nẵng",
-      "addressCountry": "VN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "16.067839",
-      "longitude": "108.216433"
-    },
-    "telephone": "0902950816",
-    "priceRange": "1.900.000đ – 5.500.000đ",
-    "openingHours": "Mo-Su 08:00-20:00",
-    "sameAs": [
-      "https://zalo.me/0902950816",
-      "https://m.me/khoadientudanangvn"
-    ]
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SIMILOCK Đà Nẵng",
+  "telephone": "0902950816",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "223 Trường Chinh",
+    "addressLocality": "Đà Nẵng",
+    "addressCountry": "VN"
   }
-  </script>
+}
+</script>
 
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- LIB -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; background: #f8f9fa; }
-    nav { box-shadow: 0 4px 6px rgba(0,0,0,.1); }
-    section { padding: 60px 0; }
-    footer { background: linear-gradient(135deg,#0d6efd,#6610f2); color: #fff; }
-    .product-card img { max-height: 250px; object-fit: cover; cursor: pointer; }
-    .lightbox {
-      display:none; position:fixed; inset:0;
-      background:rgba(0,0,0,.8);
-      z-index:2000; justify-content:center; align-items:center;
-    }
-    .lightbox img { max-width:90%; max-height:90%; }
-  </style>
+<style>
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial;background:#f8f9fa}
+
+.navbar{box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.hero{
+  background:linear-gradient(135deg,#0d6efd,#6610f2);
+  color:#fff;padding:90px 0;
+}
+.hero h1{font-weight:800}
+.hero p{font-size:1.15rem}
+
+.btn-main{
+  background:#fff;color:#0d6efd;
+  padding:14px 30px;border-radius:40px;
+  font-weight:700;transition:.3s
+}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.2)}
+
+.section{padding:80px 0}
+
+.card{
+  border:none;border-radius:16px;
+  transition:.4s;overflow:hidden
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.15)
+}
+.card img{height:230px;object-fit:cover}
+
+.badge-hot{
+  position:absolute;top:15px;left:15px;
+  background:#dc3545;color:#fff;
+  padding:6px 14px;border-radius:20px;
+  font-size:13px
+}
+
+.review{
+  background:#fff;padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08)
+}
+
+footer{
+  background:linear-gradient(135deg,#0d6efd,#6610f2);
+  color:#fff
+}
+</style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold text-primary" href="#">SIMILOCK Đà Nẵng</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#gioi-thieu">Giới thiệu</a></li>
-        <li class="nav-item"><a class="nav-link" href="#san-pham">Sản phẩm</a></li>
-        <li class="nav-item"><a class="nav-link" href="#danh-gia">Đánh giá</a></li>
-        <li class="nav-item"><a class="nav-link" href="#lien-he">Liên hệ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sanpham">Sản phẩm</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lydo">Vì sao chọn</a></li>
+        <li class="nav-item"><a class="nav-link" href="#danhgia">Đánh giá</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lienhe">Liên hệ</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<header class="bg-white text-center py-5 shadow-sm">
+<!-- HERO -->
+<section class="hero text-center">
   <div class="container" data-aos="fade-up">
-    <h1 class="display-5 fw-bold">Khóa Điện Tử & Khóa Vân Tay SIMILOCK</h1>
-    <p class="lead">
-      Giải pháp khóa thông minh phù hợp khí hậu & tài chính người miền Trung  
-      <br>👉 <strong>Miễn phí lắp đặt và bảo hành 24 tháng tận nhà</strong>
+    <h1>Khóa Điện Tử & Khóa Vân Tay SIMILOCK</h1>
+    <p class="mt-3">
+      Phù hợp khí hậu miền Trung – Giá hợp lý – Vận hành ổn định<br>
+      <strong>Miễn phí lắp đặt và bảo hành 24 tháng tận nhà</strong>
     </p>
-    <a href="tel:0902950816" class="btn btn-primary btn-lg rounded-pill">
+    <a href="tel:0902950816" class="btn btn-main mt-4">
       📞 Gọi ngay 0902 950 816
     </a>
   </div>
-</header>
-
-<!-- Giới thiệu -->
-<section id="gioi-thieu">
-  <div class="container text-center" data-aos="fade-up">
-    <h2>SIMILOCK Đà Nẵng</h2>
-    <p>
-      Chuyên lắp đặt <strong>khóa vân tay – khóa cửa điện tử – FaceID SIMILOCK</strong><br>
-      Lắp đặt hàng ngày tại Đà Nẵng – Hội An – Điện Ngọc<br>
-      Giá hợp lý – vận hành ổn định – hậu mãi tận tâm.
-    </p>
-  </div>
 </section>
 
-<!-- Sản phẩm -->
-<section id="san-pham" class="container" data-aos="fade-up">
-  <h2 class="text-center mb-4">Sản Phẩm SIMILOCK Nổi Bật</h2>
+<!-- SẢN PHẨM -->
+<section id="sanpham" class="section">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Sản Phẩm SIMILOCK Nổi Bật</h2>
+    <div class="row g-4">
 
-  <div id="lightbox" class="lightbox">
-    <img id="lightbox-img">
-  </div>
-
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card product-card">
-        <img src="https://i.imgur.com/RvQ2tJD.jpeg" alt="Khóa cửa nhôm xingfa SIMILOCK">
-        <div class="card-body">
-          <h5 class="text-center">SIMILOCK – Cửa Nhôm Xingfa</h5>
-          <p class="text-primary fw-bold text-center">2.250.000đ</p>
-          <p>Vân tay • Mã số • Thẻ từ • Chìa cơ • App. Miễn phí lắp đặt & bảo hành 24 tháng tận nhà.</p>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card position-relative">
+          <span class="badge-hot">Bán chạy</span>
+          <img src="https://i.imgur.com/RvQ2tJD.jpeg">
+          <div class="card-body text-center">
+            <h5>SIMILOCK – Cửa Nhôm Xingfa</h5>
+            <p class="text-primary fw-bold">2.250.000đ</p>
+            <p>Vân tay • Mã số • Thẻ từ • App</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card product-card">
-        <img src="https://i.imgur.com/ubAfHKX.jpeg" alt="Khóa FaceID SIMILOCK">
-        <div class="card-body">
-          <h5 class="text-center">SIMILOCK FaceID – Wifi</h5>
-          <p class="text-primary fw-bold text-center">3.500.000đ</p>
-          <p>FaceID siêu nhanh • Mở khóa từ xa • 7 phương thức • Bảo hành tận nhà.</p>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card">
+          <img src="https://i.imgur.com/ubAfHKX.jpeg">
+          <div class="card-body text-center">
+            <h5>SIMILOCK FaceID – Wifi</h5>
+            <p class="text-primary fw-bold">3.500.000đ</p>
+            <p>FaceID • Mở từ xa • 7 phương thức</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card product-card">
-        <img src="https://i.imgur.com/7YQpR5U.jpeg" alt="Khóa cổng SIMILOCK Inox 304">
-        <div class="card-body">
-          <h5 class="text-center">SIMILOCK – Khóa Cổng Cửa Sắt</h5>
-          <p class="text-primary fw-bold text-center">2.800.000đ</p>
-          <p>Inox 304 • Chống mưa nắng • Phù hợp khí hậu miền Trung.</p>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card">
+          <img src="https://i.imgur.com/7YQpR5U.jpeg">
+          <div class="card-body text-center">
+            <h5>SIMILOCK – Khóa Cổng Inox 304</h5>
+            <p class="text-primary fw-bold">2.800.000đ</p>
+            <p>Chống mưa nắng – Bền bỉ</p>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Đánh giá -->
-<section id="danh-gia" class="bg-light">
-  <div class="container text-center" data-aos="fade-up">
-    <h2>Khách Hàng Nói Gì?</h2>
+<!-- LÝ DO -->
+<section id="lydo" class="section bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-aos="fade-up">Vì Sao Khách Hàng Chọn SIMILOCK?</h2>
     <div class="row mt-4">
-      <div class="col-md-4">“Lắp đẹp – kỹ thuật làm rất gọn.”<br><small>Anh Minh</small></div>
-      <div class="col-md-4">“App dễ dùng – quản lý rất tiện.”<br><small>Chị Hằng</small></div>
-      <div class="col-md-4">“Giá hợp lý – hậu mãi rõ ràng.”<br><small>Anh Tuấn</small></div>
+      <div class="col-md-4" data-aos="fade-right">🔐 An toàn – bảo mật cao</div>
+      <div class="col-md-4" data-aos="fade-up">⚙️ Vận hành ổn định – ít lỗi</div>
+      <div class="col-md-4" data-aos="fade-left">🛠 Miễn phí lắp đặt & bảo hành 24 tháng</div>
     </div>
   </div>
 </section>
 
-<!-- Liên hệ -->
-<section id="lien-he">
-  <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-4">Liên Hệ SIMILOCK Đà Nẵng</h2>
-    <div class="row">
-      <div class="col-md-5">
-        <p><strong>📍 Địa chỉ:</strong> 223 Trường Chinh, Đà Nẵng</p>
-        <p><strong>📞 Hotline:</strong> <a href="tel:0902950816">0902 950 816</a></p>
-        <p><strong>🎁</strong> Miễn phí lắp đặt & bảo hành 24 tháng tận nhà</p>
+<!-- ĐÁNH GIÁ -->
+<section id="danhgia" class="section">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Khách Hàng Nói Gì?</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="review">“Lắp đẹp – kỹ thuật làm rất gọn.”<br><small>Anh Minh</small></div>
       </div>
-      <div class="col-md-7">
-        <iframe class="w-100 rounded shadow" height="300" loading="lazy"
-          src="https://www.google.com/maps?q=223+Trường+Chinh+Đà+Nẵng&output=embed"></iframe>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="review">“App dễ dùng – quản lý tiện.”<br><small>Chị Hằng</small></div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="review">“Giá hợp lý – hậu mãi rõ ràng.”<br><small>Anh Tuấn</small></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- LIÊN HỆ -->
+<section id="lienhe" class="section bg-light">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="fw-bold mb-4">Liên Hệ SIMILOCK Đà Nẵng</h2>
+    <p>📍 223 Trường Chinh, Đà Nẵng</p>
+    <p>📞 <a href="tel:0902950816">0902 950 816</a></p>
+    <a href="https://zalo.me/0902950816" class="btn btn-success btn-lg mt-3">Chat Zalo</a>
+  </div>
+</section>
+
 <footer class="text-center py-4">
-  <p>© 2025 SIMILOCK Đà Nẵng</p>
-  <a href="https://zalo.me/0902950816" class="btn btn-success btn-sm">Zalo</a>
-  <a href="tel:0902950816" class="btn btn-primary btn-sm">Gọi ngay</a>
+  © 2025 SIMILOCK Đà Nẵng
 </footer>
 
-<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({ duration: 800, once: true });
-const lb=document.getElementById('lightbox');
-const lbImg=document.getElementById('lightbox-img');
-document.querySelectorAll('.product-card img').forEach(img=>{
-  img.onclick=()=>{ lbImg.src=img.src; lb.style.display='flex'; }
-});
-lb.onclick=()=>lb.style.display='none';
-</script>
+<script>AOS.init({duration:900,once:true});</script>
 
 </body>
 </html>
